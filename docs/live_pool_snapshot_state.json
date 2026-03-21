@@ -1,13 +1,11 @@
 {
   "current_completed_games": 34,
   "current_snapshot_key": "beb794c701680ae0",
-  "latest_completed_game": "Round of 32: Michigan State over Louisville",
-  "newly_completed_games": [
-    "Round of 32: Michigan State over Louisville"
-  ],
-  "newly_completed_games_count": 1,
+  "latest_completed_game": "",
+  "newly_completed_games": [],
+  "newly_completed_games_count": 0,
   "previous_completed_games": 33,
   "previous_snapshot_key": "642a0a38c44454af",
-  "trend_baseline_updated_this_run": true,
-  "updated_at": "2026-03-21T21:15:46.805556+00:00"
+  "trend_baseline_updated_this_run": false,
+  "updated_at": "2026-03-21T21:20:02.679962+00:00"
 }
