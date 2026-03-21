@@ -1251,6 +1251,68 @@ def build_team_status_map(
     return status_map, current_round
 
 
+def build_first_four_pick_resolution_map(
+    first_four_lookup: Dict[str, Tuple[str, str]],
+    team_lookup: Dict[str, TeamRecord],
+    resolved_winners: Dict[str, str],
+) -> Dict[str, str]:
+    resolution_map: Dict[str, str] = {}
+
+    for placeholder_id, (team1_id, team2_id) in first_four_lookup.items():
+        winner = resolved_winners.get(placeholder_id)
+        team1 = team_lookup.get(team1_id)
+        team2 = team_lookup.get(team2_id)
+        if not winner or not team1 or not team2:
+            continue
+
+        team1_name = team1.team_name
+        team2_name = team2.team_name
+        alias_forms = {
+            f"{team1_name}/{team2_name}",
+            f"{team2_name}/{team1_name}",
+            f"{team1_name} / {team2_name}",
+            f"{team2_name} / {team1_name}",
+            f"{team1_name} {team2_name}",
+            f"{team2_name} {team1_name}",
+            f"{team1_name}/{team2_name} Winner",
+            f"{team2_name}/{team1_name} Winner",
+            f"Winner of {team1_name}/{team2_name}",
+            f"Winner of {team2_name}/{team1_name}",
+            f"Winner of {team1_name} vs {team2_name}",
+            f"Winner of {team2_name} vs {team1_name}",
+        }
+        for alias in alias_forms:
+            resolution_map[normalize_team_key(alias)] = winner
+
+    return resolution_map
+
+
+def apply_resolved_placeholder_picks(
+    entries_df: pd.DataFrame,
+    placeholder_resolution_map: Dict[str, str],
+) -> Tuple[pd.DataFrame, List[Tuple[str, str, str]]]:
+    if not placeholder_resolution_map:
+        return entries_df, []
+
+    resolved_entries = entries_df.copy()
+    replacements: List[Tuple[str, str, str]] = []
+
+    for idx, row in resolved_entries.iterrows():
+        entry_name = str(row.get("name") or "").strip()
+        for column_idx in range(1, 11):
+            column = f"team_{column_idx}"
+            raw_value = row.get(column)
+            if pd.isna(raw_value):
+                continue
+            normalized = normalize_team_key(raw_value)
+            replacement = placeholder_resolution_map.get(normalized)
+            if replacement and str(raw_value).strip() != replacement:
+                resolved_entries.at[idx, column] = replacement
+                replacements.append((entry_name, str(raw_value).strip(), replacement))
+
+    return resolved_entries, replacements
+
+
 def build_dashboard_payload(
     leaderboard: pd.DataFrame,
     *,
@@ -1548,14 +1610,13 @@ def main() -> None:
         raise FileNotFoundError(f"Could not find tournament workbook: {workbook_path}")
 
     entries_path = resolve_pool_entries_path(base_dir)
-    entries_df = read_pool_entries(entries_path)
+    raw_entries_df = read_pool_entries(entries_path)
 
     team_lookup, _games, round_multipliers, logistic_k, rating_col = load_model_inputs(workbook_path)
+    first_four_lookup = load_first_four_games(workbook_path)
     team_lookup_by_name = {team.team_name: team for team in team_lookup.values()}
     team_name_index = build_team_name_index(team_lookup)
     team_id_index = build_team_id_index(team_lookup)
-    entries_df, entries_matrix, ordered_team_names = build_entries_matrix(entries_df, team_lookup)
-    team_index = {team_name: idx for idx, team_name in enumerate(ordered_team_names)}
 
     resolved_winners_path = base_dir / RESOLVED_WINNERS_FILE
     saved_winners = load_resolved_winners(resolved_winners_path)
@@ -1607,6 +1668,17 @@ def main() -> None:
     merged_winners = dict(saved_winners)
     merged_winners.update(fixed_winners)
     save_resolved_winners(resolved_winners_path, merged_winners)
+    placeholder_resolution_map = build_first_four_pick_resolution_map(
+        first_four_lookup,
+        team_lookup,
+        merged_winners,
+    )
+    entries_df, placeholder_replacements = apply_resolved_placeholder_picks(
+        raw_entries_df,
+        placeholder_resolution_map,
+    )
+    entries_df, entries_matrix, ordered_team_names = build_entries_matrix(entries_df, team_lookup)
+    team_index = {team_name: idx for idx, team_name in enumerate(ordered_team_names)}
     new_winner_count = sum(1 for key, value in fixed_winners.items() if saved_winners.get(key) != value)
     current_snapshot_key = build_snapshot_key(merged_winners)
     newly_completed_games = describe_completed_games(nodes, live_state, saved_winners, merged_winners)
@@ -1683,6 +1755,11 @@ def main() -> None:
             + ", ".join(unresolved_names)
         )
     print(" - None")
+    if placeholder_replacements:
+        print("Resolved placeholder entry picks")
+        print("==============================")
+        for entry_name, original_value, resolved_value in placeholder_replacements:
+            print(f" - {entry_name}: {original_value} -> {resolved_value}")
 
     current_team_scores, eliminated_teams = compute_current_state(
         nodes,

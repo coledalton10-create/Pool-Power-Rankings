@@ -14,13 +14,16 @@ import pandas as pd
 from live_pool_updater import (
     RESOLVED_WINNERS_FILE,
     TOURNAMENT_FILE,
+    apply_resolved_placeholder_picks,
     build_bracket_template,
+    build_first_four_pick_resolution_map,
     compute_current_state,
     load_env_file,
     load_resolved_winners,
 )
 from simulate_pool_portfolio import (
     build_entries_matrix,
+    load_first_four_games,
     load_model_inputs,
     read_pool_entries,
     resolve_pool_entries_path,
@@ -54,13 +57,24 @@ def main() -> None:
     entries_path = resolve_pool_entries_path(base_dir)
     resolved_winners_path = base_dir / RESOLVED_WINNERS_FILE
 
-    entries_df = read_pool_entries(entries_path)
+    raw_entries_df = read_pool_entries(entries_path)
     team_lookup, _games, round_multipliers, _logistic_k, _rating_col = load_model_inputs(workbook_path)
     team_lookup_by_name = {team.team_name: team for team in team_lookup.values()}
+
+    saved_winners = load_resolved_winners(resolved_winners_path)
+    first_four_lookup = load_first_four_games(workbook_path)
+    placeholder_resolution_map = build_first_four_pick_resolution_map(
+        first_four_lookup,
+        team_lookup,
+        saved_winners,
+    )
+    entries_df, _placeholder_replacements = apply_resolved_placeholder_picks(
+        raw_entries_df,
+        placeholder_resolution_map,
+    )
     entries_df, entries_matrix, ordered_team_names = build_entries_matrix(entries_df, team_lookup)
     team_index = {team_name: idx for idx, team_name in enumerate(ordered_team_names)}
 
-    saved_winners = load_resolved_winners(resolved_winners_path)
     nodes = build_bracket_template(workbook_path, saved_winners)
     live_state = {node_id: None for node_id in nodes}
     from live_pool_updater import LiveNodeState  # local import to avoid changing updater logic
