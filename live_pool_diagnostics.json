@@ -16,11 +16,11 @@
     "pages_site/live_pool_snapshot_state.json"
   ],
   "previous_snapshot_key": "1f501acd71d581d0",
-  "remaining_games_using_fallback_model": 27,
-  "remaining_games_with_odds": 2,
+  "remaining_games_using_fallback_model": 25,
+  "remaining_games_with_odds": 4,
   "simulations_run": 10000,
   "top3_share_sum": 2.999999999999999,
-  "top4_share_sum": 3.9999999999999987,
+  "top4_share_sum": 3.9999999999999982,
   "trend_baseline_updated_this_run": false,
-  "win_probability_sum": 0.9999999999999991
+  "win_probability_sum": 0.9999999999999993
 }
