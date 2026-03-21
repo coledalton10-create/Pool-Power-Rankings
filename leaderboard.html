@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>March Madness Pool Live Leaderboard</title>
+  <style>
+    :root {
+      --bg: #f4efe5;
+      --panel: rgba(255, 251, 244, 0.95);
+      --panel-strong: #fffaf2;
+      --text: #1e2825;
+      --muted: #617068;
+      --line: rgba(34, 53, 45, 0.12);
+      --shadow: 0 24px 72px rgba(35, 45, 40, 0.12);
+      --green: #1f7a4f;
+      --red: #c04d3c;
+      --gray: #8f968f;
+      --gold: #d09426;
+      --header-bg: #22362c;
+      --header-text: #f8f2e8;
+      --chip: rgba(34, 53, 45, 0.08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Avenir Next", "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(224, 214, 192, 0.95), transparent 28%),
+        radial-gradient(circle at top right, rgba(174, 202, 182, 0.45), transparent 22%),
+        linear-gradient(180deg, #fbf6ec 0%, var(--bg) 46%, #eee5d5 100%);
+    }
+    .shell { max-width: 1400px; margin: 0 auto; padding: 30px 18px 56px; }
+    .hero, .summary-card, .leaderboard-card, .status, .error, .empty {
+      background: var(--panel); border: 1px solid var(--line); border-radius: 24px; box-shadow: var(--shadow); backdrop-filter: blur(10px);
+    }
+    .hero { padding: 28px; margin-bottom: 18px; position: relative; overflow: hidden; }
+    .hero::after { content: ""; position: absolute; right: -70px; bottom: -110px; width: 280px; height: 280px; background: radial-gradient(circle, rgba(31, 122, 79, 0.16), transparent 70%); pointer-events: none; }
+    .eyebrow { display: inline-flex; align-items: center; padding: 7px 12px; border-radius: 999px; background: rgba(34, 53, 45, 0.08); color: var(--muted); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; }
+    h1 { margin: 16px 0 10px; font-size: clamp(34px, 5vw, 60px); line-height: 0.95; letter-spacing: -0.04em; max-width: 12ch; }
+    .subtitle { margin: 0; color: var(--muted); max-width: 56ch; font-size: 16px; line-height: 1.55; }
+    .hero-meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+    .meta-chip { display: inline-flex; align-items: center; gap: 8px; padding: 10px 12px; border-radius: 14px; background: var(--chip); font-size: 13px; color: var(--text); }
+    .summary-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-bottom: 18px; }
+    .summary-card { padding: 18px; min-height: 124px; }
+    .summary-label { color: var(--muted); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; }
+    .summary-value { margin-top: 14px; font-size: 25px; font-weight: 700; line-height: 1.05; letter-spacing: -0.03em; }
+    .summary-detail { margin-top: 10px; color: var(--muted); font-size: 14px; line-height: 1.45; }
+    .leaderboard-card { overflow: hidden; }
+    .toolbar { padding: 18px 20px; display: flex; justify-content: space-between; align-items: center; gap: 16px; border-bottom: 1px solid var(--line); }
+    .toolbar-title { font-size: 20px; font-weight: 700; letter-spacing: -0.02em; }
+    .toolbar-subtitle { margin-top: 4px; color: var(--muted); font-size: 13px; }
+    .view-toggle { display: inline-flex; padding: 4px; border-radius: 999px; background: rgba(34, 53, 45, 0.08); }
+    .toggle-button { border: 0; background: transparent; color: var(--muted); padding: 10px 16px; border-radius: 999px; font: inherit; font-size: 13px; font-weight: 700; cursor: pointer; }
+    .toggle-button.active { background: var(--header-bg); color: var(--header-text); box-shadow: 0 8px 24px rgba(34, 53, 45, 0.18); }
+    .view { display: none; }
+    .view.active { display: block; }
+    .table-wrap { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; min-width: 940px; }
+    thead th { padding: 14px 16px; background: var(--header-bg); color: var(--header-text); text-align: left; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; white-space: nowrap; user-select: none; cursor: pointer; }
+    tbody td { padding: 15px 16px; border-top: 1px solid var(--line); vertical-align: middle; white-space: nowrap; font-size: 14px; }
+    tbody tr:hover { background: rgba(255, 255, 255, 0.52); }
+    .rank-pill { display: inline-flex; min-width: 38px; justify-content: center; padding: 7px 10px; border-radius: 999px; background: rgba(34, 53, 45, 0.08); font-weight: 700; }
+    .entry-name { font-weight: 700; font-size: 15px; letter-spacing: -0.01em; }
+    .entry-meta { margin-top: 5px; color: var(--muted); font-size: 12px; }
+    .metric-strong { font-weight: 700; font-size: 15px; }
+    .odds-bar { margin-top: 8px; width: 126px; height: 7px; border-radius: 999px; background: rgba(34, 53, 45, 0.08); overflow: hidden; }
+    .odds-fill { height: 100%; border-radius: inherit; background: linear-gradient(90deg, var(--gold), var(--green)); }
+    .trend { display: inline-flex; align-items: center; gap: 8px; padding: 7px 10px; border-radius: 999px; font-size: 13px; font-weight: 700; }
+    .trend.up { background: rgba(31, 122, 79, 0.12); color: var(--green); }
+    .trend.down { background: rgba(192, 77, 60, 0.12); color: var(--red); }
+    .trend.flat { background: rgba(34, 53, 45, 0.08); color: var(--muted); }
+    .teams-grid { display: grid; gap: 0; }
+    .teams-row { display: grid; grid-template-columns: 240px minmax(0, 1fr); gap: 18px; padding: 18px 20px; border-top: 1px solid var(--line); align-items: start; }
+    .teams-row:first-child { border-top: 0; }
+    .teams-pills { display: flex; flex-wrap: wrap; gap: 8px; }
+    .team-pill { display: inline-flex; align-items: center; gap: 8px; padding: 8px 11px; border-radius: 999px; font-size: 12px; font-weight: 700; letter-spacing: 0.01em; background: rgba(34, 53, 45, 0.08); color: var(--text); border: 1px solid transparent; }
+    .team-pill.won_current_round { background: rgba(31, 122, 79, 0.14); color: var(--green); border-color: rgba(31, 122, 79, 0.18); }
+    .team-pill.lost_current_round { background: rgba(192, 77, 60, 0.14); color: var(--red); border-color: rgba(192, 77, 60, 0.18); }
+    .team-pill.not_played_current_round, .team-pill.advanced_prior { background: rgba(34, 53, 45, 0.08); color: var(--gray); border-color: rgba(34, 53, 45, 0.08); }
+    .team-pill.eliminated_prior { background: rgba(143, 150, 143, 0.14); color: var(--muted); border-color: rgba(143, 150, 143, 0.18); opacity: 0.82; }
+    .status, .error, .empty { margin-top: 18px; padding: 18px 20px; color: var(--muted); font-size: 14px; line-height: 1.5; }
+    .error { display: none; border-color: rgba(192, 77, 60, 0.28); background: rgba(192, 77, 60, 0.08); color: #7d2d22; }
+    .empty { display: none; }
+    @media (max-width: 980px) {
+      .summary-grid { grid-template-columns: 1fr; }
+      .toolbar { flex-direction: column; align-items: flex-start; }
+      .teams-row { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .shell { padding: 18px 14px 40px; }
+      .hero, .summary-card, .leaderboard-card, .status, .error, .empty { border-radius: 18px; }
+      thead th, tbody td { padding: 12px 14px; }
+      .view-toggle { width: 100%; }
+      .toggle-button { flex: 1 1 50%; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <section class="hero">
+      <div class="eyebrow">Live Pool Dashboard</div>
+      <h1 id="hero-title">March Madness Pool Live Leaderboard</h1>
+      <p class="subtitle" id="hero-subtitle">Loading the latest standings and win odds.</p>
+      <div class="hero-meta">
+        <div class="meta-chip" id="updated-chip">Refreshing latest snapshot...</div>
+        <div class="meta-chip" id="completed-chip">Completed games: --</div>
+        <div class="meta-chip" id="round-chip">Current round: --</div>
+      </div>
+    </section>
+    <section class="summary-grid" id="summary-grid"></section>
+    <section class="leaderboard-card">
+      <div class="toolbar">
+        <div>
+          <div class="toolbar-title">Leaderboard</div>
+          <div class="toolbar-subtitle">Switch between stats and roster context without leaving the same live snapshot.</div>
+        </div>
+        <div class="view-toggle" role="tablist" aria-label="Leaderboard views">
+          <button class="toggle-button active" id="stats-tab" data-view="stats" role="tab" aria-selected="true">Stats</button>
+          <button class="toggle-button" id="teams-tab" data-view="teams" role="tab" aria-selected="false">Teams Left</button>
+        </div>
+      </div>
+      <div class="view active" id="stats-view">
+        <div class="table-wrap">
+          <table id="leaderboard">
+            <thead><tr></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="view" id="teams-view">
+        <div class="teams-grid" id="teams-grid"></div>
+      </div>
+    </section>
+    <div class="empty" id="empty">No leaderboard rows were returned.</div>
+    <div class="status" id="status">Loading latest dashboard data...</div>
+    <div class="error" id="error"></div>
+  </div>
+  <script>
+    const DATA_PATH = "live_pool_dashboard.json";
+    const REFRESH_MS = 60000;
+    const SORT_STORAGE_KEY = "pool-dashboard-sort-v3";
+    const VIEW_STORAGE_KEY = "pool-dashboard-view-v1";
+    const DISPLAY_COLUMNS = [
+      { label: "Rank", key: "current_rank", type: "number" },
+      { label: "Entry", key: "name", type: "text" },
+      { label: "Current Score", key: "current_score", type: "number" },
+      { label: "Win Odds", key: "live_win_rate", type: "number" },
+      { label: "Top 4 Odds", key: "top4_rate", type: "number" },
+      { label: "Rank Trend", key: "trend_rank_delta", type: "number" },
+      { label: "Teams Left", key: "remaining_live_teams", type: "number" },
+      { label: "Projection", key: "p50_score", type: "number" },
+      { label: "Ceiling", key: "best_case_score", type: "number" },
+    ];
+    let currentSort = { key: "current_rank", direction: "asc", type: "number" };
+    let currentView = "stats";
+    let latestPayload = null;
+    function saveSortState() { localStorage.setItem(SORT_STORAGE_KEY, JSON.stringify(currentSort)); }
+    function restoreSortState() {
+      const raw = localStorage.getItem(SORT_STORAGE_KEY);
+      if (!raw) return;
+      try {
+        const parsed = JSON.parse(raw);
+        const matching = DISPLAY_COLUMNS.find((column) => column.key === parsed.key);
+        if (!matching || !["asc", "desc"].includes(parsed.direction)) return;
+        currentSort = { key: matching.key, direction: parsed.direction, type: matching.type };
+      } catch (_error) {}
+    }
+    function restoreViewState() {
+      const raw = localStorage.getItem(VIEW_STORAGE_KEY);
+      if (raw === "teams" || raw === "stats") currentView = raw;
+    }
+    function setView(viewName) {
+      currentView = viewName;
+      localStorage.setItem(VIEW_STORAGE_KEY, currentView);
+      document.getElementById("stats-view").classList.toggle("active", currentView === "stats");
+      document.getElementById("teams-view").classList.toggle("active", currentView === "teams");
+      document.getElementById("stats-tab").classList.toggle("active", currentView === "stats");
+      document.getElementById("teams-tab").classList.toggle("active", currentView === "teams");
+      document.getElementById("stats-tab").setAttribute("aria-selected", String(currentView === "stats"));
+      document.getElementById("teams-tab").setAttribute("aria-selected", String(currentView === "teams"));
+    }
+    function formatPercent(value, digits = 1) { const number = Number(value); if (!Number.isFinite(number)) return ""; return `${(number * 100).toFixed(digits)}%`; }
+    function formatNumber(value) { const number = Number(value); if (!Number.isFinite(number)) return ""; return Math.round(number).toString(); }
+    function trendDirection(value, invert = false) { const number = Number(value); if (!Number.isFinite(number) || number === 0) return "flat"; if (invert) return number > 0 ? "up" : "down"; return number > 0 ? "up" : "down"; }
+    function formatTrend(value) { const number = Number(value); if (!Number.isFinite(number) || number === 0) return "No change"; const magnitude = Math.abs(Math.round(number)); return `${number > 0 ? "Up" : "Down"} ${magnitude}`; }
+    function sortRows(rows) {
+      return rows.slice().sort((a, b) => {
+        if (currentSort.type === "number") {
+          const aValue = Number(a[currentSort.key]);
+          const bValue = Number(b[currentSort.key]);
+          if (aValue !== bValue) return currentSort.direction === "asc" ? aValue - bValue : bValue - aValue;
+          return a.name.localeCompare(b.name);
+        }
+        const result = String(a[currentSort.key] ?? "").localeCompare(String(b[currentSort.key] ?? ""));
+        return currentSort.direction === "asc" ? result : -result;
+      });
+    }
+    async function fetchPayload() { const response = await fetch(`${DATA_PATH}?t=${Date.now()}`, { cache: "no-store" }); if (!response.ok) throw new Error(`HTTP ${response.status}`); return response.json(); }
+    function renderSummaryCards(cards) {
+      const container = document.getElementById("summary-grid");
+      container.innerHTML = "";
+      for (const card of cards) {
+        const element = document.createElement("article");
+        element.className = "summary-card";
+        element.innerHTML = `<div class="summary-label">${card.label}</div><div class="summary-value">${card.value}</div><div class="summary-detail">${card.detail}</div>`;
+        container.appendChild(element);
+      }
+    }
+    function renderHeaders() {
+      const headerRow = document.querySelector("#leaderboard thead tr");
+      headerRow.innerHTML = "";
+      for (const column of DISPLAY_COLUMNS) {
+        const th = document.createElement("th");
+        th.textContent = column.label;
+        th.addEventListener("click", () => {
+          if (currentSort.key === column.key) currentSort.direction = currentSort.direction === "asc" ? "desc" : "asc";
+          else currentSort = { key: column.key, direction: column.type === "text" ? "asc" : "desc", type: column.type };
+          saveSortState();
+          renderStatsTable();
+        });
+        headerRow.appendChild(th);
+      }
+    }
+    function renderStatsTable() {
+      const tbody = document.querySelector("#leaderboard tbody");
+      tbody.innerHTML = "";
+      const rows = latestPayload?.rows || [];
+      const sortedRows = sortRows(rows);
+      document.getElementById("empty").style.display = sortedRows.length ? "none" : "block";
+      if (!sortedRows.length) return;
+      for (const row of sortedRows) {
+        const tr = document.createElement("tr");
+        const rankTrend = trendDirection(row.trend_rank_delta, true);
+        const oddsWidth = Math.max(0, Math.min(100, Number(row.live_win_rate) * 100));
+        tr.innerHTML = `
+          <td><span class="rank-pill">${formatNumber(row.current_rank)}</span></td>
+          <td><div class="entry-name">${row.name}</div><div class="entry-meta">${formatNumber(row.remaining_live_teams)} teams left</div></td>
+          <td><div class="metric-strong">${formatNumber(row.current_score)}</div></td>
+          <td><div class="metric-strong">${formatPercent(row.live_win_rate)}</div><div class="odds-bar"><div class="odds-fill" style="width:${oddsWidth}%"></div></div></td>
+          <td><div class="metric-strong">${formatPercent(row.top4_rate)}</div></td>
+          <td><span class="trend ${rankTrend}">${rankTrend === "up" ? "↑" : rankTrend === "down" ? "↓" : "→"} ${formatTrend(row.trend_rank_delta)}</span></td>
+          <td>${formatNumber(row.remaining_live_teams)}</td>
+          <td>${formatNumber(row.p50_score)}</td>
+          <td>${formatNumber(row.best_case_score)}</td>
+        `;
+        tbody.appendChild(tr);
+      }
+    }
+    function renderTeamsView() {
+      const container = document.getElementById("teams-grid");
+      container.innerHTML = "";
+      const rows = sortRows(latestPayload?.rows || []);
+      if (!rows.length) return;
+      for (const row of rows) {
+        const entry = document.createElement("div");
+        entry.className = "teams-row";
+        const pills = (row.teams || []).map((team) => {
+          const label = team.current_round_status === "won_current_round" ? "Won" : team.current_round_status === "lost_current_round" ? "Lost" : team.current_round_status === "eliminated_prior" ? "Out" : "Pending";
+          return `<span class="team-pill ${team.current_round_status}">${team.team}<span>${label}</span></span>`;
+        }).join("");
+        entry.innerHTML = `<div><div class="entry-name">${row.name}</div><div class="entry-meta">${formatNumber(row.remaining_live_teams)} teams left | Win odds ${formatPercent(row.live_win_rate)}</div></div><div class="teams-pills">${pills}</div>`;
+        container.appendChild(entry);
+      }
+    }
+    function renderPayload(payload) {
+      latestPayload = payload;
+      document.getElementById("hero-title").textContent = payload.headline?.title || "March Madness Pool Live Leaderboard";
+      document.getElementById("hero-subtitle").textContent = payload.headline?.subtitle || "";
+      document.getElementById("updated-chip").textContent = `Updated ${new Date(payload.updated_at).toLocaleString()}`;
+      document.getElementById("completed-chip").textContent = `Completed games: ${payload.trend?.current_completed_games ?? "--"}`;
+      document.getElementById("round-chip").textContent = `Current round: ${payload.trend?.current_round_label || "--"}`;
+      renderSummaryCards(payload.summary_cards || []);
+      renderStatsTable();
+      renderTeamsView();
+    }
+    async function loadDashboard() {
+      const status = document.getElementById("status");
+      const error = document.getElementById("error");
+      try {
+        const payload = await fetchPayload();
+        renderPayload(payload);
+        status.textContent = `Last loaded: ${new Date().toLocaleString()}`;
+        error.style.display = "none";
+        error.textContent = "";
+      } catch (err) {
+        status.textContent = "Could not load the latest dashboard data.";
+        error.textContent = `Error loading ${DATA_PATH}: ${err.message}`;
+        error.style.display = "block";
+      }
+    }
+    restoreSortState();
+    restoreViewState();
+    renderHeaders();
+    setView(currentView);
+    document.getElementById("stats-tab").addEventListener("click", () => setView("stats"));
+    document.getElementById("teams-tab").addEventListener("click", () => setView("teams"));
+    loadDashboard();
+    setInterval(loadDashboard, REFRESH_MS);
+  </script>
+</body>
+</html>

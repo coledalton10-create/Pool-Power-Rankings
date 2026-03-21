@@ -1,0 +1,9 @@
+# Local secrets / machine-specific noise
+.env
+.DS_Store
+
+# Local host/deploy state
+.netlify
+logs/
+live_pool_runner.log
+pages_site_git_metadata_backup/
