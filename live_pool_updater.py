@@ -109,6 +109,9 @@ EXPLICIT_TEAM_ALIASES = {
     "north carolina state": "NC State",
     "texas": "Texas",
     "texas longhorns": "Texas",
+    "tcu horned frogs": "TCU",
+    "illinois fighting illini": "Illinois",
+    "duke blue devils": "Duke",
     "nc state texas winner": "NC State/Texas Winner",
     "nc state/texas winner": "NC State/Texas Winner",
 }
@@ -211,6 +214,11 @@ def get_simulation_count() -> int:
         return max(1, int(raw_value))
     except ValueError:
         return DEFAULT_SIMULATIONS
+
+
+def odds_api_disabled() -> bool:
+    raw_value = os.getenv("DISABLE_THE_ODDS_API", "").strip().lower()
+    return raw_value in {"1", "true", "yes", "on"}
 
 
 def fetch_json_with_headers_verbose(
@@ -1639,18 +1647,23 @@ def main() -> None:
         print("NCAA scoreboard fetch failed; falling back to saved state only.")
         score_events = []
         score_credits_remaining = None
-    try:
-        odds_events, odds_credits_remaining = load_the_odds_api_odds(score_events)
-    except urllib.error.HTTPError as exc:
-        if exc.code != 403:
-            raise
-        print("Odds API fetch failed with HTTP 403; using fallback model for all remaining games.")
+    if odds_api_disabled():
+        print("Odds API disabled by DISABLE_THE_ODDS_API; using fallback model for all remaining games.")
         odds_events = []
         odds_credits_remaining = None
-    except urllib.error.URLError:
-        print("Odds API fetch failed; using fallback model for all remaining games.")
-        odds_events = []
-        odds_credits_remaining = None
+    else:
+        try:
+            odds_events, odds_credits_remaining = load_the_odds_api_odds(score_events)
+        except urllib.error.HTTPError as exc:
+            if exc.code != 403:
+                raise
+            print("Odds API fetch failed with HTTP 403; using fallback model for all remaining games.")
+            odds_events = []
+            odds_credits_remaining = None
+        except urllib.error.URLError:
+            print("Odds API fetch failed; using fallback model for all remaining games.")
+            odds_events = []
+            odds_credits_remaining = None
     odds_by_event_id, odds_by_pair, odds_before_count, odds_after_match_count = build_market_probabilities(
         odds_events,
         team_name_index,
