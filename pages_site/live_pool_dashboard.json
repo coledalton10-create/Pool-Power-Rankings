@@ -1,62 +1,274 @@
 {
-  "updated_at": "2026-03-22T01:05:56.636899+00:00",
+  "updated_at": "2026-03-22T01:20:43.984578+00:00",
   "headline": {
     "title": "March Madness Pool Live Leaderboard",
     "subtitle": "Current standings and odds to win from the latest completed-game state."
   },
   "trend": {
-    "baseline_updated_this_run": false,
-    "current_completed_games": 36,
-    "trend_reference_completed_games": 35,
-    "latest_completed_game": "",
+    "baseline_updated_this_run": true,
+    "current_completed_games": 37,
+    "trend_reference_completed_games": 36,
+    "latest_completed_game": "Round of 32: Texas over Gonzaga",
     "current_round_label": "Round of 32"
   },
   "summary_cards": [
     {
       "label": "Current Leader",
-      "value": "Dan Downs",
-      "detail": "42 points"
+      "value": "Ellis Fleming",
+      "detail": "53 points"
     },
     {
       "label": "Odds Favorite",
       "value": "Ellis Fleming",
-      "detail": "23.5% win odds"
+      "detail": "32.2% win odds"
     },
     {
       "label": "Biggest Riser",
-      "value": "Bradley Duell",
-      "detail": "6 rank spots"
+      "value": "Morgan Fishback",
+      "detail": "23 rank spots"
     }
   ],
   "snapshot_state": {
-    "current_snapshot_key": "519ed8091a1b1179",
-    "previous_snapshot_key": "7c39954d7e69400c",
-    "current_completed_games": 36,
-    "previous_completed_games": 35,
-    "trend_baseline_updated_this_run": false,
-    "newly_completed_games_count": 0,
-    "newly_completed_games": [],
-    "latest_completed_game": "",
-    "updated_at": "2026-03-22T01:05:56.636899+00:00"
+    "current_snapshot_key": "164b5778cca71ffb",
+    "previous_snapshot_key": "519ed8091a1b1179",
+    "current_completed_games": 37,
+    "previous_completed_games": 36,
+    "trend_baseline_updated_this_run": true,
+    "newly_completed_games_count": 1,
+    "newly_completed_games": [
+      "Round of 32: Texas over Gonzaga"
+    ],
+    "latest_completed_game": "Round of 32: Texas over Gonzaga",
+    "updated_at": "2026-03-22T01:20:43.984578+00:00"
   },
   "rows": [
     {
-      "name": "Dan Downs",
+      "name": "Ellis Fleming",
       "current_rank": 1,
-      "current_score": 42,
-      "live_win_rate": 0.08735,
-      "top4_rate": 0.24270833333333336,
+      "current_score": 53,
+      "live_win_rate": 0.3216333333333333,
+      "top4_rate": 0.7290449999999999,
       "remaining_live_teams": 10,
-      "p50_score": 120.0,
-      "best_case_score": 306,
-      "top3_rate": 0.19745,
-      "top10_rate": 0.46858666666666665,
-      "last_rate": 0.0004,
+      "p50_score": 155.0,
+      "best_case_score": 360,
+      "top3_rate": 0.63855,
+      "top10_rate": 0.9404749999999998,
+      "last_rate": 0.0,
       "trend_rank_delta": 1.0,
-      "trend_score_delta": 2.0,
-      "trend_odds_delta": 0.012016666666666703,
+      "trend_score_delta": 12.0,
+      "trend_odds_delta": 0.07730000000000004,
       "trend_rank_direction": "up",
       "current_rank_label": 1,
+      "teams": [
+        {
+          "team": "Arizona",
+          "alive": true,
+          "current_round_status": "not_played_current_round"
+        },
+        {
+          "team": "Illinois",
+          "alive": true,
+          "current_round_status": "not_played_current_round"
+        },
+        {
+          "team": "Purdue",
+          "alive": true,
+          "current_round_status": "not_played_current_round"
+        },
+        {
+          "team": "Tennessee",
+          "alive": true,
+          "current_round_status": "not_played_current_round"
+        },
+        {
+          "team": "Vanderbilt",
+          "alive": true,
+          "current_round_status": "not_played_current_round"
+        },
+        {
+          "team": "Michigan State",
+          "alive": true,
+          "current_round_status": "won_current_round"
+        },
+        {
+          "team": "Arkansas",
+          "alive": true,
+          "current_round_status": "not_played_current_round"
+        },
+        {
+          "team": "UCLA",
+          "alive": true,
+          "current_round_status": "not_played_current_round"
+        },
+        {
+          "team": "Texas",
+          "alive": true,
+          "current_round_status": "won_current_round"
+        },
+        {
+          "team": "Iowa State",
+          "alive": true,
+          "current_round_status": "not_played_current_round"
+        }
+      ]
+    },
+    {
+      "name": "Stephen Mason",
+      "current_rank": 2,
+      "current_score": 52,
+      "live_win_rate": 0.10843333333333335,
+      "top4_rate": 0.37690833333333346,
+      "remaining_live_teams": 9,
+      "p50_score": 134.0,
+      "best_case_score": 320,
+      "top3_rate": 0.3062,
+      "top10_rate": 0.6386833333333336,
+      "last_rate": 0.0,
+      "trend_rank_delta": 1.0,
+      "trend_score_delta": 12.0,
+      "trend_odds_delta": 0.013633333333333358,
+      "trend_rank_direction": "up",
+      "current_rank_label": 2,
+      "teams": [
+        {
+          "team": "Michigan",
+          "alive": true,
+          "current_round_status": "won_current_round"
+        },
+        {
+          "team": "Michigan State",
+          "alive": true,
+          "current_round_status": "won_current_round"
+        },
+        {
+          "team": "Illinois",
+          "alive": true,
+          "current_round_status": "not_played_current_round"
+        },
+        {
+          "team": "Kansas",
+          "alive": true,
+          "current_round_status": "not_played_current_round"
+        },
+        {
+          "team": "Purdue",
+          "alive": true,
+          "current_round_status": "not_played_current_round"
+        },
+        {
+          "team": "Vanderbilt",
+          "alive": true,
+          "current_round_status": "not_played_current_round"
+        },
+        {
+          "team": "Wisconsin",
+          "alive": false,
+          "current_round_status": "eliminated_prior"
+        },
+        {
+          "team": "Texas",
+          "alive": true,
+          "current_round_status": "won_current_round"
+        },
+        {
+          "team": "Tennessee",
+          "alive": true,
+          "current_round_status": "not_played_current_round"
+        },
+        {
+          "team": "Iowa",
+          "alive": true,
+          "current_round_status": "not_played_current_round"
+        }
+      ]
+    },
+    {
+      "name": "Ryan Evans",
+      "current_rank": 3,
+      "current_score": 45,
+      "live_win_rate": 0.08586666666666666,
+      "top4_rate": 0.2833733333333334,
+      "remaining_live_teams": 9,
+      "p50_score": 124.0,
+      "best_case_score": 294,
+      "top3_rate": 0.22420833333333332,
+      "top10_rate": 0.5122533333333333,
+      "last_rate": 0.0,
+      "trend_rank_delta": 9.0,
+      "trend_score_delta": 12.0,
+      "trend_odds_delta": 0.015166666666666662,
+      "trend_rank_direction": "up",
+      "current_rank_label": 3,
+      "teams": [
+        {
+          "team": "Florida",
+          "alive": true,
+          "current_round_status": "not_played_current_round"
+        },
+        {
+          "team": "Michigan",
+          "alive": true,
+          "current_round_status": "won_current_round"
+        },
+        {
+          "team": "Kansas",
+          "alive": true,
+          "current_round_status": "not_played_current_round"
+        },
+        {
+          "team": "Purdue",
+          "alive": true,
+          "current_round_status": "not_played_current_round"
+        },
+        {
+          "team": "Texas Tech",
+          "alive": true,
+          "current_round_status": "not_played_current_round"
+        },
+        {
+          "team": "South Florida",
+          "alive": false,
+          "current_round_status": "eliminated_prior"
+        },
+        {
+          "team": "Texas",
+          "alive": true,
+          "current_round_status": "won_current_round"
+        },
+        {
+          "team": "Arkansas",
+          "alive": true,
+          "current_round_status": "not_played_current_round"
+        },
+        {
+          "team": "Illinois",
+          "alive": true,
+          "current_round_status": "not_played_current_round"
+        },
+        {
+          "team": "Kentucky",
+          "alive": true,
+          "current_round_status": "not_played_current_round"
+        }
+      ]
+    },
+    {
+      "name": "Dan Downs",
+      "current_rank": 4,
+      "current_score": 42,
+      "live_win_rate": 0.09088333333333333,
+      "top4_rate": 0.251325,
+      "remaining_live_teams": 10,
+      "p50_score": 121.0,
+      "best_case_score": 324,
+      "top3_rate": 0.20549166666666666,
+      "top10_rate": 0.48437166666666664,
+      "last_rate": 0.0001,
+      "trend_rank_delta": -3.0,
+      "trend_score_delta": 0.0,
+      "trend_odds_delta": 0.003883333333333336,
+      "trend_rank_direction": "down",
+      "current_rank_label": 4,
       "teams": [
         {
           "team": "Duke",
@@ -111,162 +323,22 @@
       ]
     },
     {
-      "name": "Ellis Fleming",
-      "current_rank": 2,
-      "current_score": 41,
-      "live_win_rate": 0.23503333333333334,
-      "top4_rate": 0.5909149999999999,
-      "remaining_live_teams": 10,
-      "p50_score": 147.0,
-      "best_case_score": 346,
-      "top3_rate": 0.5076533333333335,
-      "top10_rate": 0.8500166666666668,
+      "name": "Sid Cash Sr.",
+      "current_rank": 5,
+      "current_score": 39,
+      "live_win_rate": 0.025733333333333337,
+      "top4_rate": 0.14595833333333336,
+      "remaining_live_teams": 9,
+      "p50_score": 110.0,
+      "best_case_score": 305,
+      "top3_rate": 0.11048333333333332,
+      "top10_rate": 0.3549683333333333,
       "last_rate": 0.0,
       "trend_rank_delta": -1.0,
       "trend_score_delta": 0.0,
-      "trend_odds_delta": 0.07460000000000006,
+      "trend_odds_delta": -0.022999999999999965,
       "trend_rank_direction": "down",
-      "current_rank_label": 2,
-      "teams": [
-        {
-          "team": "Arizona",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
-        },
-        {
-          "team": "Illinois",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
-        },
-        {
-          "team": "Purdue",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
-        },
-        {
-          "team": "Tennessee",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
-        },
-        {
-          "team": "Vanderbilt",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
-        },
-        {
-          "team": "Michigan State",
-          "alive": true,
-          "current_round_status": "won_current_round"
-        },
-        {
-          "team": "Arkansas",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
-        },
-        {
-          "team": "UCLA",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
-        },
-        {
-          "team": "Texas",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
-        },
-        {
-          "team": "Iowa State",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
-        }
-      ]
-    },
-    {
-      "name": "Stephen Mason",
-      "current_rank": 3,
-      "current_score": 40,
-      "live_win_rate": 0.092,
-      "top4_rate": 0.3029316666666667,
-      "remaining_live_teams": 9,
-      "p50_score": 127.0,
-      "best_case_score": 336,
-      "top3_rate": 0.2487366666666667,
-      "top10_rate": 0.53995,
-      "last_rate": 0.00122,
-      "trend_rank_delta": -1.0,
-      "trend_score_delta": 0.0,
-      "trend_odds_delta": 0.023816666666666694,
-      "trend_rank_direction": "down",
-      "current_rank_label": 3,
-      "teams": [
-        {
-          "team": "Michigan",
-          "alive": true,
-          "current_round_status": "won_current_round"
-        },
-        {
-          "team": "Michigan State",
-          "alive": true,
-          "current_round_status": "won_current_round"
-        },
-        {
-          "team": "Illinois",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
-        },
-        {
-          "team": "Kansas",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
-        },
-        {
-          "team": "Purdue",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
-        },
-        {
-          "team": "Vanderbilt",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
-        },
-        {
-          "team": "Wisconsin",
-          "alive": false,
-          "current_round_status": "eliminated_prior"
-        },
-        {
-          "team": "Texas",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
-        },
-        {
-          "team": "Tennessee",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
-        },
-        {
-          "team": "Iowa",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
-        }
-      ]
-    },
-    {
-      "name": "Sid Cash Sr.",
-      "current_rank": 4,
-      "current_score": 39,
-      "live_win_rate": 0.050916666666666666,
-      "top4_rate": 0.19774166666666668,
-      "remaining_live_teams": 10,
-      "p50_score": 114.5,
-      "best_case_score": 337,
-      "top3_rate": 0.15613333333333335,
-      "top10_rate": 0.4095433333333333,
-      "last_rate": 0.0001,
-      "trend_rank_delta": 1.0,
-      "trend_score_delta": 2.0,
-      "trend_odds_delta": -0.02889999999999994,
-      "trend_rank_direction": "up",
-      "current_rank_label": 4,
+      "current_rank_label": 5,
       "teams": [
         {
           "team": "Duke",
@@ -295,8 +367,8 @@
         },
         {
           "team": "Gonzaga",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
+          "alive": false,
+          "current_round_status": "lost_current_round"
         },
         {
           "team": "Vanderbilt",
@@ -322,21 +394,21 @@
     },
     {
       "name": "Alec Piloto",
-      "current_rank": 5,
+      "current_rank": 6,
       "current_score": 38,
-      "live_win_rate": 0.0196,
-      "top4_rate": 0.19533333333333333,
+      "live_win_rate": 0.017833333333333333,
+      "top4_rate": 0.197975,
       "remaining_live_teams": 9,
-      "p50_score": 125.0,
-      "best_case_score": 346,
-      "top3_rate": 0.12680833333333338,
-      "top10_rate": 0.5632283333333333,
-      "last_rate": 0.0001,
+      "p50_score": 126.0,
+      "best_case_score": 334,
+      "top3_rate": 0.1318666666666667,
+      "top10_rate": 0.5799566666666667,
+      "last_rate": 5e-05,
       "trend_rank_delta": -1.0,
       "trend_score_delta": 0.0,
-      "trend_odds_delta": -0.00485,
+      "trend_odds_delta": -0.0008666666666666684,
       "trend_rank_direction": "down",
-      "current_rank_label": 5,
+      "current_rank_label": 6,
       "teams": [
         {
           "team": "Purdue",
@@ -391,22 +463,92 @@
       ]
     },
     {
-      "name": "Nick Garas",
+      "name": "Morgan Fishback",
       "current_rank": 6,
-      "current_score": 37,
-      "live_win_rate": 0.1037,
-      "top4_rate": 0.32230000000000003,
-      "remaining_live_teams": 10,
-      "p50_score": 133.0,
-      "best_case_score": 294,
-      "top3_rate": 0.25875,
-      "top10_rate": 0.6412633333333334,
+      "current_score": 38,
+      "live_win_rate": 0.0143,
+      "top4_rate": 0.12877,
+      "remaining_live_teams": 8,
+      "p50_score": 103.0,
+      "best_case_score": 264,
+      "top3_rate": 0.08604166666666667,
+      "top10_rate": 0.29975333333333337,
       "last_rate": 0.0,
-      "trend_rank_delta": -1.0,
-      "trend_score_delta": 0.0,
-      "trend_odds_delta": -0.0380166666666666,
-      "trend_rank_direction": "down",
+      "trend_rank_delta": 23.0,
+      "trend_score_delta": 12.0,
+      "trend_odds_delta": 0.006200000000000001,
+      "trend_rank_direction": "up",
       "current_rank_label": 6,
+      "teams": [
+        {
+          "team": "South Florida",
+          "alive": false,
+          "current_round_status": "eliminated_prior"
+        },
+        {
+          "team": "Vanderbilt",
+          "alive": true,
+          "current_round_status": "not_played_current_round"
+        },
+        {
+          "team": "Arkansas",
+          "alive": true,
+          "current_round_status": "not_played_current_round"
+        },
+        {
+          "team": "Iowa State",
+          "alive": true,
+          "current_round_status": "not_played_current_round"
+        },
+        {
+          "team": "Saint Mary's",
+          "alive": false,
+          "current_round_status": "eliminated_prior"
+        },
+        {
+          "team": "Illinois",
+          "alive": true,
+          "current_round_status": "not_played_current_round"
+        },
+        {
+          "team": "Florida",
+          "alive": true,
+          "current_round_status": "not_played_current_round"
+        },
+        {
+          "team": "St. John's",
+          "alive": true,
+          "current_round_status": "not_played_current_round"
+        },
+        {
+          "team": "Texas",
+          "alive": true,
+          "current_round_status": "won_current_round"
+        },
+        {
+          "team": "Michigan",
+          "alive": true,
+          "current_round_status": "won_current_round"
+        }
+      ]
+    },
+    {
+      "name": "Nick Garas",
+      "current_rank": 8,
+      "current_score": 37,
+      "live_win_rate": 0.06731666666666666,
+      "top4_rate": 0.2597833333333334,
+      "remaining_live_teams": 9,
+      "p50_score": 130.0,
+      "best_case_score": 284,
+      "top3_rate": 0.19748333333333332,
+      "top10_rate": 0.5961033333333334,
+      "last_rate": 0.0,
+      "trend_rank_delta": -2.0,
+      "trend_score_delta": 0.0,
+      "trend_odds_delta": -0.03274999999999993,
+      "trend_rank_direction": "down",
+      "current_rank_label": 8,
       "teams": [
         {
           "team": "Purdue",
@@ -435,8 +577,8 @@
         },
         {
           "team": "Gonzaga",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
+          "alive": false,
+          "current_round_status": "lost_current_round"
         },
         {
           "team": "Miami (FL)",
@@ -462,21 +604,21 @@
     },
     {
       "name": "Ben Hewitt",
-      "current_rank": 6,
+      "current_rank": 8,
       "current_score": 37,
-      "live_win_rate": 0.05258333333333333,
-      "top4_rate": 0.1576,
-      "remaining_live_teams": 10,
-      "p50_score": 102.0,
-      "best_case_score": 275,
-      "top3_rate": 0.12883333333333336,
-      "top10_rate": 0.30431500000000006,
-      "last_rate": 0.0007833333333333334,
-      "trend_rank_delta": 1.0,
-      "trend_score_delta": 2.0,
-      "trend_odds_delta": 0.00488333333333333,
-      "trend_rank_direction": "up",
-      "current_rank_label": 6,
+      "live_win_rate": 0.0411,
+      "top4_rate": 0.12431666666666664,
+      "remaining_live_teams": 9,
+      "p50_score": 98.0,
+      "best_case_score": 268,
+      "top3_rate": 0.10400833333333333,
+      "top10_rate": 0.25756166666666663,
+      "last_rate": 0.00055,
+      "trend_rank_delta": -2.0,
+      "trend_score_delta": 0.0,
+      "trend_odds_delta": -0.009733333333333302,
+      "trend_rank_direction": "down",
+      "current_rank_label": 8,
       "teams": [
         {
           "team": "Michigan",
@@ -500,8 +642,8 @@
         },
         {
           "team": "Gonzaga",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
+          "alive": false,
+          "current_round_status": "lost_current_round"
         },
         {
           "team": "Michigan State",
@@ -532,21 +674,21 @@
     },
     {
       "name": "Frank Greer",
-      "current_rank": 8,
+      "current_rank": 10,
       "current_score": 35,
-      "live_win_rate": 0.0465,
-      "top4_rate": 0.17730833333333332,
-      "remaining_live_teams": 10,
-      "p50_score": 119.0,
-      "best_case_score": 290,
-      "top3_rate": 0.13385000000000002,
-      "top10_rate": 0.41920166666666675,
+      "live_win_rate": 0.02725,
+      "top4_rate": 0.12627,
+      "remaining_live_teams": 9,
+      "p50_score": 115.0,
+      "best_case_score": 267,
+      "top3_rate": 0.09158333333333335,
+      "top10_rate": 0.35140166666666683,
       "last_rate": 0.0,
-      "trend_rank_delta": -1.0,
+      "trend_rank_delta": -2.0,
       "trend_score_delta": 0.0,
-      "trend_odds_delta": -0.0188333333333333,
+      "trend_odds_delta": -0.0178,
       "trend_rank_direction": "down",
-      "current_rank_label": 8,
+      "current_rank_label": 10,
       "teams": [
         {
           "team": "Arkansas",
@@ -580,8 +722,8 @@
         },
         {
           "team": "Gonzaga",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
+          "alive": false,
+          "current_round_status": "lost_current_round"
         },
         {
           "team": "Texas Tech",
@@ -602,21 +744,21 @@
     },
     {
       "name": "Sydney Taylor",
-      "current_rank": 8,
+      "current_rank": 10,
       "current_score": 35,
-      "live_win_rate": 0.020383333333333333,
-      "top4_rate": 0.1675333333333333,
+      "live_win_rate": 0.021766666666666667,
+      "top4_rate": 0.16879499999999997,
       "remaining_live_teams": 9,
-      "p50_score": 121.0,
-      "best_case_score": 333,
-      "top3_rate": 0.10834999999999997,
-      "top10_rate": 0.49953166666666676,
+      "p50_score": 123.0,
+      "best_case_score": 339,
+      "top3_rate": 0.11063333333333335,
+      "top10_rate": 0.5238633333333332,
       "last_rate": 0.0,
-      "trend_rank_delta": 2.0,
-      "trend_score_delta": 2.0,
-      "trend_odds_delta": -0.0003499999999999684,
-      "trend_rank_direction": "up",
-      "current_rank_label": 8,
+      "trend_rank_delta": -2.0,
+      "trend_score_delta": 0.0,
+      "trend_odds_delta": 0.0015333333333333657,
+      "trend_rank_direction": "down",
+      "current_rank_label": 10,
       "teams": [
         {
           "team": "Houston",
@@ -672,21 +814,21 @@
     },
     {
       "name": "Sid Cash Jr.",
-      "current_rank": 8,
+      "current_rank": 10,
       "current_score": 35,
-      "live_win_rate": 0.020183333333333334,
-      "top4_rate": 0.140025,
+      "live_win_rate": 0.018883333333333332,
+      "top4_rate": 0.14630833333333332,
       "remaining_live_teams": 9,
-      "p50_score": 120.0,
-      "best_case_score": 349,
-      "top3_rate": 0.090925,
-      "top10_rate": 0.4379833333333334,
-      "last_rate": 0.0001,
-      "trend_rank_delta": 2.0,
-      "trend_score_delta": 2.0,
-      "trend_odds_delta": 0.0055333333333333345,
-      "trend_rank_direction": "up",
-      "current_rank_label": 8,
+      "p50_score": 121.0,
+      "best_case_score": 334,
+      "top3_rate": 0.09326666666666668,
+      "top10_rate": 0.4513333333333336,
+      "last_rate": 0.0002,
+      "trend_rank_delta": -2.0,
+      "trend_score_delta": 0.0,
+      "trend_odds_delta": -0.0012999999999999678,
+      "trend_rank_direction": "down",
+      "current_rank_label": 10,
       "teams": [
         {
           "team": "Arizona",
@@ -742,21 +884,21 @@
     },
     {
       "name": "Cole Dalton",
-      "current_rank": 11,
+      "current_rank": 13,
       "current_score": 34,
-      "live_win_rate": 0.00095,
-      "top4_rate": 0.01985,
-      "remaining_live_teams": 7,
-      "p50_score": 108.0,
-      "best_case_score": 323,
-      "top3_rate": 0.012233333333333332,
-      "top10_rate": 0.20154166666666662,
-      "last_rate": 0.00245,
+      "live_win_rate": 0.0,
+      "top4_rate": 0.0011166666666666668,
+      "remaining_live_teams": 6,
+      "p50_score": 104.0,
+      "best_case_score": 329,
+      "top3_rate": 0.00015,
+      "top10_rate": 0.13834166666666672,
+      "last_rate": 0.0032,
       "trend_rank_delta": -2.0,
       "trend_score_delta": 0.0,
-      "trend_odds_delta": -0.0012500000000000002,
+      "trend_odds_delta": -0.00085,
       "trend_rank_direction": "down",
-      "current_rank_label": 11,
+      "current_rank_label": 13,
       "teams": [
         {
           "team": "Purdue",
@@ -770,8 +912,8 @@
         },
         {
           "team": "Gonzaga",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
+          "alive": false,
+          "current_round_status": "lost_current_round"
         },
         {
           "team": "Wisconsin",
@@ -811,92 +953,22 @@
       ]
     },
     {
-      "name": "Ryan Evans",
-      "current_rank": 12,
+      "name": "Thomas Stephens",
+      "current_rank": 14,
       "current_score": 33,
-      "live_win_rate": 0.06885,
-      "top4_rate": 0.2285916666666667,
+      "live_win_rate": 0.014066666666666668,
+      "top4_rate": 0.11046666666666666,
       "remaining_live_teams": 9,
-      "p50_score": 118.0,
-      "best_case_score": 278,
-      "top3_rate": 0.18240833333333334,
-      "top10_rate": 0.4205916666666666,
-      "last_rate": 0.0033,
+      "p50_score": 116.0,
+      "best_case_score": 309,
+      "top3_rate": 0.07041666666666667,
+      "top10_rate": 0.38313166666666676,
+      "last_rate": 0.0,
       "trend_rank_delta": -2.0,
       "trend_score_delta": 0.0,
-      "trend_odds_delta": 0.021933333333333395,
+      "trend_odds_delta": -0.0038499999999999333,
       "trend_rank_direction": "down",
-      "current_rank_label": 12,
-      "teams": [
-        {
-          "team": "Florida",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
-        },
-        {
-          "team": "Michigan",
-          "alive": true,
-          "current_round_status": "won_current_round"
-        },
-        {
-          "team": "Kansas",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
-        },
-        {
-          "team": "Purdue",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
-        },
-        {
-          "team": "Texas Tech",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
-        },
-        {
-          "team": "South Florida",
-          "alive": false,
-          "current_round_status": "eliminated_prior"
-        },
-        {
-          "team": "Texas",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
-        },
-        {
-          "team": "Arkansas",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
-        },
-        {
-          "team": "Illinois",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
-        },
-        {
-          "team": "Kentucky",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
-        }
-      ]
-    },
-    {
-      "name": "Thomas Stephens",
-      "current_rank": 12,
-      "current_score": 33,
-      "live_win_rate": 0.017816666666666668,
-      "top4_rate": 0.10955833333333335,
-      "remaining_live_teams": 9,
-      "p50_score": 115.0,
-      "best_case_score": 306,
-      "top3_rate": 0.07094166666666668,
-      "top10_rate": 0.3646583333333333,
-      "last_rate": 0.0,
-      "trend_rank_delta": 3.0,
-      "trend_score_delta": 2.0,
-      "trend_odds_delta": -0.0037333333333333316,
-      "trend_rank_direction": "up",
-      "current_rank_label": 12,
+      "current_rank_label": 14,
       "teams": [
         {
           "team": "Arizona",
@@ -951,92 +1023,22 @@
       ]
     },
     {
-      "name": "Morgan Anthony",
-      "current_rank": 14,
-      "current_score": 32,
-      "live_win_rate": 0.008,
-      "top4_rate": 0.04881666666666666,
-      "remaining_live_teams": 7,
-      "p50_score": 80.0,
-      "best_case_score": 244,
-      "top3_rate": 0.03883333333333333,
-      "top10_rate": 0.12199166666666665,
-      "last_rate": 0.05295,
-      "trend_rank_delta": 4.0,
-      "trend_score_delta": 2.0,
-      "trend_odds_delta": -0.003633333333333299,
-      "trend_rank_direction": "up",
-      "current_rank_label": 14,
-      "teams": [
-        {
-          "team": "Houston",
-          "alive": true,
-          "current_round_status": "won_current_round"
-        },
-        {
-          "team": "Gonzaga",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
-        },
-        {
-          "team": "Tennessee",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
-        },
-        {
-          "team": "UConn",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
-        },
-        {
-          "team": "North Carolina",
-          "alive": false,
-          "current_round_status": "eliminated_prior"
-        },
-        {
-          "team": "Vanderbilt",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
-        },
-        {
-          "team": "Louisville",
-          "alive": false,
-          "current_round_status": "lost_current_round"
-        },
-        {
-          "team": "Ohio State",
-          "alive": false,
-          "current_round_status": "eliminated_prior"
-        },
-        {
-          "team": "Iowa",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
-        },
-        {
-          "team": "St. John's",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
-        }
-      ]
-    },
-    {
       "name": "Ansley Duell",
-      "current_rank": 14,
+      "current_rank": 15,
       "current_score": 32,
-      "live_win_rate": 0.0018,
-      "top4_rate": 0.05704166666666667,
+      "live_win_rate": 0.0028,
+      "top4_rate": 0.061770000000000005,
       "remaining_live_teams": 9,
-      "p50_score": 106.0,
-      "best_case_score": 249,
-      "top3_rate": 0.030533333333333336,
-      "top10_rate": 0.26977499999999993,
-      "last_rate": 0.0024166666666666664,
+      "p50_score": 107.0,
+      "best_case_score": 266,
+      "top3_rate": 0.03265,
+      "top10_rate": 0.28981166666666647,
+      "last_rate": 0.00095,
       "trend_rank_delta": -1.0,
       "trend_score_delta": 0.0,
-      "trend_odds_delta": -0.001,
+      "trend_odds_delta": 0.0011,
       "trend_rank_direction": "down",
-      "current_rank_label": 14,
+      "current_rank_label": 15,
       "teams": [
         {
           "team": "Vanderbilt",
@@ -1091,22 +1093,92 @@
       ]
     },
     {
-      "name": "Jack Anthony",
-      "current_rank": 14,
+      "name": "Morgan Anthony",
+      "current_rank": 15,
       "current_score": 32,
-      "live_win_rate": 0.0,
-      "top4_rate": 0.00035,
-      "remaining_live_teams": 5,
-      "p50_score": 74.0,
-      "best_case_score": 227,
-      "top3_rate": 0.00011666666666666665,
-      "top10_rate": 0.00935,
-      "last_rate": 0.01817,
+      "live_win_rate": 0.00195,
+      "top4_rate": 0.027125,
+      "remaining_live_teams": 6,
+      "p50_score": 75.0,
+      "best_case_score": 241,
+      "top3_rate": 0.018983333333333335,
+      "top10_rate": 0.08337,
+      "last_rate": 0.06783333333333333,
       "trend_rank_delta": -1.0,
       "trend_score_delta": 0.0,
-      "trend_odds_delta": -0.00315,
+      "trend_odds_delta": -0.005600000000000001,
       "trend_rank_direction": "down",
-      "current_rank_label": 14,
+      "current_rank_label": 15,
+      "teams": [
+        {
+          "team": "Houston",
+          "alive": true,
+          "current_round_status": "won_current_round"
+        },
+        {
+          "team": "Gonzaga",
+          "alive": false,
+          "current_round_status": "lost_current_round"
+        },
+        {
+          "team": "Tennessee",
+          "alive": true,
+          "current_round_status": "not_played_current_round"
+        },
+        {
+          "team": "UConn",
+          "alive": true,
+          "current_round_status": "not_played_current_round"
+        },
+        {
+          "team": "North Carolina",
+          "alive": false,
+          "current_round_status": "eliminated_prior"
+        },
+        {
+          "team": "Vanderbilt",
+          "alive": true,
+          "current_round_status": "not_played_current_round"
+        },
+        {
+          "team": "Louisville",
+          "alive": false,
+          "current_round_status": "lost_current_round"
+        },
+        {
+          "team": "Ohio State",
+          "alive": false,
+          "current_round_status": "eliminated_prior"
+        },
+        {
+          "team": "Iowa",
+          "alive": true,
+          "current_round_status": "not_played_current_round"
+        },
+        {
+          "team": "St. John's",
+          "alive": true,
+          "current_round_status": "not_played_current_round"
+        }
+      ]
+    },
+    {
+      "name": "Jack Anthony",
+      "current_rank": 15,
+      "current_score": 32,
+      "live_win_rate": 0.0,
+      "top4_rate": 0.0002,
+      "remaining_live_teams": 5,
+      "p50_score": 74.0,
+      "best_case_score": 234,
+      "top3_rate": 0.0,
+      "top10_rate": 0.013909999999999999,
+      "last_rate": 0.01265,
+      "trend_rank_delta": -1.0,
+      "trend_score_delta": 0.0,
+      "trend_odds_delta": 0.0,
+      "trend_rank_direction": "down",
+      "current_rank_label": 15,
       "teams": [
         {
           "team": "Arkansas",
@@ -1162,21 +1234,21 @@
     },
     {
       "name": "MK Anthony",
-      "current_rank": 17,
+      "current_rank": 18,
       "current_score": 31,
-      "live_win_rate": 0.06668333333333333,
-      "top4_rate": 0.195775,
+      "live_win_rate": 0.06571666666666666,
+      "top4_rate": 0.19214166666666663,
       "remaining_live_teams": 10,
-      "p50_score": 113.0,
-      "best_case_score": 264,
-      "top3_rate": 0.15568333333333334,
-      "top10_rate": 0.39607500000000007,
-      "last_rate": 0.0018,
-      "trend_rank_delta": 4.0,
-      "trend_score_delta": 2.0,
-      "trend_odds_delta": 0.0033166666666667316,
-      "trend_rank_direction": "up",
-      "current_rank_label": 17,
+      "p50_score": 114.0,
+      "best_case_score": 273,
+      "top3_rate": 0.15255833333333332,
+      "top10_rate": 0.40775500000000003,
+      "last_rate": 0.0012333333333333335,
+      "trend_rank_delta": -1.0,
+      "trend_score_delta": 0.0,
+      "trend_odds_delta": -0.0011166666666666408,
+      "trend_rank_direction": "down",
+      "current_rank_label": 18,
       "teams": [
         {
           "team": "Duke",
@@ -1232,21 +1304,21 @@
     },
     {
       "name": "John Fishback",
-      "current_rank": 17,
+      "current_rank": 18,
       "current_score": 31,
-      "live_win_rate": 0.03188333333333333,
-      "top4_rate": 0.14970833333333336,
+      "live_win_rate": 0.03,
+      "top4_rate": 0.15924166666666664,
       "remaining_live_teams": 10,
-      "p50_score": 107.0,
-      "best_case_score": 263,
-      "top3_rate": 0.11506666666666665,
-      "top10_rate": 0.3542033333333334,
-      "last_rate": 0.0017,
-      "trend_rank_delta": -2.0,
+      "p50_score": 109.0,
+      "best_case_score": 251,
+      "top3_rate": 0.11886666666666668,
+      "top10_rate": 0.3749283333333332,
+      "last_rate": 0.0005,
+      "trend_rank_delta": -1.0,
       "trend_score_delta": 0.0,
-      "trend_odds_delta": -0.00261666666666667,
+      "trend_odds_delta": -0.0011833333333333002,
       "trend_rank_direction": "down",
-      "current_rank_label": 17,
+      "current_rank_label": 18,
       "teams": [
         {
           "team": "Florida",
@@ -1302,21 +1374,21 @@
     },
     {
       "name": "Tanner Downs",
-      "current_rank": 17,
+      "current_rank": 18,
       "current_score": 31,
-      "live_win_rate": 0.00105,
-      "top4_rate": 0.048341666666666665,
-      "remaining_live_teams": 8,
-      "p50_score": 105.0,
-      "best_case_score": 279,
-      "top3_rate": 0.027616666666666664,
-      "top10_rate": 0.17936666666666667,
-      "last_rate": 0.00015,
-      "trend_rank_delta": -2.0,
+      "live_win_rate": 0.0,
+      "top4_rate": 0.03621666666666666,
+      "remaining_live_teams": 7,
+      "p50_score": 101.0,
+      "best_case_score": 267,
+      "top3_rate": 0.022483333333333334,
+      "top10_rate": 0.13206666666666664,
+      "last_rate": 0.0004,
+      "trend_rank_delta": -1.0,
       "trend_score_delta": 0.0,
-      "trend_odds_delta": -0.0007833333333333,
+      "trend_odds_delta": -0.00105,
       "trend_rank_direction": "down",
-      "current_rank_label": 17,
+      "current_rank_label": 18,
       "teams": [
         {
           "team": "Arizona",
@@ -1335,8 +1407,8 @@
         },
         {
           "team": "Gonzaga",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
+          "alive": false,
+          "current_round_status": "lost_current_round"
         },
         {
           "team": "Arkansas",
@@ -1372,21 +1444,21 @@
     },
     {
       "name": "Jack Reddeck",
-      "current_rank": 20,
+      "current_rank": 21,
       "current_score": 30,
-      "live_win_rate": 0.0029,
-      "top4_rate": 0.04131666666666667,
+      "live_win_rate": 0.0019,
+      "top4_rate": 0.046211666666666665,
       "remaining_live_teams": 8,
-      "p50_score": 107.0,
-      "best_case_score": 278,
-      "top3_rate": 0.022866666666666667,
-      "top10_rate": 0.22669833333333336,
-      "last_rate": 0.0002,
-      "trend_rank_delta": -2.0,
+      "p50_score": 109.0,
+      "best_case_score": 283,
+      "top3_rate": 0.024416666666666666,
+      "top10_rate": 0.2456316666666667,
+      "last_rate": 0.0,
+      "trend_rank_delta": -1.0,
       "trend_score_delta": 0.0,
-      "trend_odds_delta": -0.0002666666666666,
+      "trend_odds_delta": -0.0009999999999999998,
       "trend_rank_direction": "down",
-      "current_rank_label": 20,
+      "current_rank_label": 21,
       "teams": [
         {
           "team": "Tennessee",
@@ -1442,21 +1514,21 @@
     },
     {
       "name": "Linda Cash",
-      "current_rank": 20,
+      "current_rank": 21,
       "current_score": 30,
-      "live_win_rate": 0.00115,
-      "top4_rate": 0.01515,
+      "live_win_rate": 0.001,
+      "top4_rate": 0.012566666666666667,
       "remaining_live_teams": 8,
       "p50_score": 80.0,
-      "best_case_score": 220,
-      "top3_rate": 0.00965,
-      "top10_rate": 0.07851999999999999,
-      "last_rate": 0.018516666666666667,
-      "trend_rank_delta": -2.0,
+      "best_case_score": 226,
+      "top3_rate": 0.0075,
+      "top10_rate": 0.084375,
+      "last_rate": 0.013583333333333331,
+      "trend_rank_delta": -1.0,
       "trend_score_delta": 0.0,
-      "trend_odds_delta": -0.0146833333333333,
+      "trend_odds_delta": -0.00014999999999999996,
       "trend_rank_direction": "down",
-      "current_rank_label": 20,
+      "current_rank_label": 21,
       "teams": [
         {
           "team": "Kansas",
@@ -1511,92 +1583,22 @@
       ]
     },
     {
-      "name": "Jimmy Anthony",
-      "current_rank": 22,
-      "current_score": 29,
-      "live_win_rate": 0.0144,
-      "top4_rate": 0.079325,
-      "remaining_live_teams": 9,
-      "p50_score": 87.0,
-      "best_case_score": 248,
-      "top3_rate": 0.0548,
-      "top10_rate": 0.20090000000000005,
-      "last_rate": 0.02315333333333333,
-      "trend_rank_delta": -1.0,
-      "trend_score_delta": 0.0,
-      "trend_odds_delta": -0.0154833333333333,
-      "trend_rank_direction": "down",
-      "current_rank_label": 22,
-      "teams": [
-        {
-          "team": "Michigan",
-          "alive": true,
-          "current_round_status": "won_current_round"
-        },
-        {
-          "team": "Gonzaga",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
-        },
-        {
-          "team": "Arizona",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
-        },
-        {
-          "team": "Tennessee",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
-        },
-        {
-          "team": "Kentucky",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
-        },
-        {
-          "team": "Duke",
-          "alive": true,
-          "current_round_status": "won_current_round"
-        },
-        {
-          "team": "Illinois",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
-        },
-        {
-          "team": "Nebraska",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
-        },
-        {
-          "team": "South Florida",
-          "alive": false,
-          "current_round_status": "eliminated_prior"
-        },
-        {
-          "team": "Kansas",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
-        }
-      ]
-    },
-    {
       "name": "Tyler Colson",
-      "current_rank": 22,
+      "current_rank": 23,
       "current_score": 29,
-      "live_win_rate": 0.0068,
-      "top4_rate": 0.04774166666666667,
+      "live_win_rate": 0.00715,
+      "top4_rate": 0.051666666666666666,
       "remaining_live_teams": 8,
-      "p50_score": 93.0,
+      "p50_score": 95.0,
       "best_case_score": 207,
-      "top3_rate": 0.035149999999999994,
-      "top10_rate": 0.14055,
-      "last_rate": 0.008153333333333334,
+      "top3_rate": 0.03693333333333333,
+      "top10_rate": 0.15327500000000005,
+      "last_rate": 0.007033333333333334,
       "trend_rank_delta": -1.0,
       "trend_score_delta": 0.0,
-      "trend_odds_delta": -0.00048333333333330005,
+      "trend_odds_delta": 0.00014999999999999996,
       "trend_rank_direction": "down",
-      "current_rank_label": 22,
+      "current_rank_label": 23,
       "teams": [
         {
           "team": "Duke",
@@ -1651,22 +1653,92 @@
       ]
     },
     {
+      "name": "Jimmy Anthony",
+      "current_rank": 23,
+      "current_score": 29,
+      "live_win_rate": 0.0044,
+      "top4_rate": 0.051825,
+      "remaining_live_teams": 8,
+      "p50_score": 82.0,
+      "best_case_score": 224,
+      "top3_rate": 0.030733333333333338,
+      "top10_rate": 0.1607433333333333,
+      "last_rate": 0.027083333333333338,
+      "trend_rank_delta": -1.0,
+      "trend_score_delta": 0.0,
+      "trend_odds_delta": -0.008400000000000001,
+      "trend_rank_direction": "down",
+      "current_rank_label": 23,
+      "teams": [
+        {
+          "team": "Michigan",
+          "alive": true,
+          "current_round_status": "won_current_round"
+        },
+        {
+          "team": "Gonzaga",
+          "alive": false,
+          "current_round_status": "lost_current_round"
+        },
+        {
+          "team": "Arizona",
+          "alive": true,
+          "current_round_status": "not_played_current_round"
+        },
+        {
+          "team": "Tennessee",
+          "alive": true,
+          "current_round_status": "not_played_current_round"
+        },
+        {
+          "team": "Kentucky",
+          "alive": true,
+          "current_round_status": "not_played_current_round"
+        },
+        {
+          "team": "Duke",
+          "alive": true,
+          "current_round_status": "won_current_round"
+        },
+        {
+          "team": "Illinois",
+          "alive": true,
+          "current_round_status": "not_played_current_round"
+        },
+        {
+          "team": "Nebraska",
+          "alive": true,
+          "current_round_status": "not_played_current_round"
+        },
+        {
+          "team": "South Florida",
+          "alive": false,
+          "current_round_status": "eliminated_prior"
+        },
+        {
+          "team": "Kansas",
+          "alive": true,
+          "current_round_status": "not_played_current_round"
+        }
+      ]
+    },
+    {
       "name": "Jake Anthony",
-      "current_rank": 22,
+      "current_rank": 23,
       "current_score": 29,
       "live_win_rate": 0.0,
-      "top4_rate": 0.03896666666666666,
+      "top4_rate": 0.043416666666666666,
       "remaining_live_teams": 8,
-      "p50_score": 112.0,
-      "best_case_score": 322,
-      "top3_rate": 0.018033333333333332,
-      "top10_rate": 0.2771,
+      "p50_score": 114.0,
+      "best_case_score": 336,
+      "top3_rate": 0.02115,
+      "top10_rate": 0.3025616666666666,
       "last_rate": 0.0009,
       "trend_rank_delta": -1.0,
       "trend_score_delta": 0.0,
       "trend_odds_delta": 0.0,
       "trend_rank_direction": "down",
-      "current_rank_label": 22,
+      "current_rank_label": 23,
       "teams": [
         {
           "team": "Arizona",
@@ -1721,162 +1793,22 @@
       ]
     },
     {
-      "name": "Caroline Colson",
-      "current_rank": 25,
-      "current_score": 28,
-      "live_win_rate": 0.0035833333333333338,
-      "top4_rate": 0.033966666666666666,
-      "remaining_live_teams": 9,
-      "p50_score": 87.0,
-      "best_case_score": 206,
-      "top3_rate": 0.02043333333333333,
-      "top10_rate": 0.1369233333333333,
-      "last_rate": 0.005233333333333333,
-      "trend_rank_delta": 0.0,
-      "trend_score_delta": 0.0,
-      "trend_odds_delta": -0.0014499999999999665,
-      "trend_rank_direction": "flat",
-      "current_rank_label": 25,
-      "teams": [
-        {
-          "team": "Florida",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
-        },
-        {
-          "team": "Duke",
-          "alive": true,
-          "current_round_status": "won_current_round"
-        },
-        {
-          "team": "Michigan State",
-          "alive": true,
-          "current_round_status": "won_current_round"
-        },
-        {
-          "team": "Iowa State",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
-        },
-        {
-          "team": "Texas Tech",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
-        },
-        {
-          "team": "Arkansas",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
-        },
-        {
-          "team": "Gonzaga",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
-        },
-        {
-          "team": "Missouri",
-          "alive": false,
-          "current_round_status": "eliminated_prior"
-        },
-        {
-          "team": "Virginia",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
-        },
-        {
-          "team": "St. John's",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
-        }
-      ]
-    },
-    {
-      "name": "Tim Dwyer",
-      "current_rank": 25,
-      "current_score": 28,
-      "live_win_rate": 0.0016,
-      "top4_rate": 0.02033333333333333,
-      "remaining_live_teams": 8,
-      "p50_score": 101.0,
-      "best_case_score": 267,
-      "top3_rate": 0.010083333333333333,
-      "top10_rate": 0.13459833333333326,
-      "last_rate": 0.0014,
-      "trend_rank_delta": 0.0,
-      "trend_score_delta": 0.0,
-      "trend_odds_delta": -0.0008833333333333,
-      "trend_rank_direction": "flat",
-      "current_rank_label": 25,
-      "teams": [
-        {
-          "team": "Wisconsin",
-          "alive": false,
-          "current_round_status": "eliminated_prior"
-        },
-        {
-          "team": "South Florida",
-          "alive": false,
-          "current_round_status": "eliminated_prior"
-        },
-        {
-          "team": "Arkansas",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
-        },
-        {
-          "team": "St. John's",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
-        },
-        {
-          "team": "Gonzaga",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
-        },
-        {
-          "team": "Purdue",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
-        },
-        {
-          "team": "Vanderbilt",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
-        },
-        {
-          "team": "Texas Tech",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
-        },
-        {
-          "team": "Iowa State",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
-        },
-        {
-          "team": "Kansas",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
-        }
-      ]
-    },
-    {
       "name": "Liz Cuda",
-      "current_rank": 25,
+      "current_rank": 26,
       "current_score": 28,
       "live_win_rate": 0.0009,
-      "top4_rate": 0.005683333333333334,
-      "remaining_live_teams": 6,
-      "p50_score": 56.0,
-      "best_case_score": 199,
-      "top3_rate": 0.0038,
-      "top10_rate": 0.020958333333333336,
-      "last_rate": 0.15958333333333333,
-      "trend_rank_delta": 0.0,
+      "top4_rate": 0.00325,
+      "remaining_live_teams": 5,
+      "p50_score": 52.0,
+      "best_case_score": 189,
+      "top3_rate": 0.00275,
+      "top10_rate": 0.009508333333333334,
+      "last_rate": 0.20841666666666664,
+      "trend_rank_delta": -1.0,
       "trend_score_delta": 0.0,
-      "trend_odds_delta": -0.00075,
-      "trend_rank_direction": "flat",
-      "current_rank_label": 25,
+      "trend_odds_delta": 0.00030000000000000003,
+      "trend_rank_direction": "down",
+      "current_rank_label": 26,
       "teams": [
         {
           "team": "Virginia",
@@ -1915,8 +1847,8 @@
         },
         {
           "team": "Gonzaga",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
+          "alive": false,
+          "current_round_status": "lost_current_round"
         },
         {
           "team": "St. John's",
@@ -1931,22 +1863,162 @@
       ]
     },
     {
+      "name": "Tim Dwyer",
+      "current_rank": 26,
+      "current_score": 28,
+      "live_win_rate": 0.00035,
+      "top4_rate": 0.01145,
+      "remaining_live_teams": 7,
+      "p50_score": 97.0,
+      "best_case_score": 266,
+      "top3_rate": 0.0054666666666666665,
+      "top10_rate": 0.09282999999999998,
+      "last_rate": 0.0018,
+      "trend_rank_delta": -1.0,
+      "trend_score_delta": 0.0,
+      "trend_odds_delta": -0.00115,
+      "trend_rank_direction": "down",
+      "current_rank_label": 26,
+      "teams": [
+        {
+          "team": "Wisconsin",
+          "alive": false,
+          "current_round_status": "eliminated_prior"
+        },
+        {
+          "team": "South Florida",
+          "alive": false,
+          "current_round_status": "eliminated_prior"
+        },
+        {
+          "team": "Arkansas",
+          "alive": true,
+          "current_round_status": "not_played_current_round"
+        },
+        {
+          "team": "St. John's",
+          "alive": true,
+          "current_round_status": "not_played_current_round"
+        },
+        {
+          "team": "Gonzaga",
+          "alive": false,
+          "current_round_status": "lost_current_round"
+        },
+        {
+          "team": "Purdue",
+          "alive": true,
+          "current_round_status": "not_played_current_round"
+        },
+        {
+          "team": "Vanderbilt",
+          "alive": true,
+          "current_round_status": "not_played_current_round"
+        },
+        {
+          "team": "Texas Tech",
+          "alive": true,
+          "current_round_status": "not_played_current_round"
+        },
+        {
+          "team": "Iowa State",
+          "alive": true,
+          "current_round_status": "not_played_current_round"
+        },
+        {
+          "team": "Kansas",
+          "alive": true,
+          "current_round_status": "not_played_current_round"
+        }
+      ]
+    },
+    {
+      "name": "Caroline Colson",
+      "current_rank": 26,
+      "current_score": 28,
+      "live_win_rate": 0.0003333333333333333,
+      "top4_rate": 0.012575,
+      "remaining_live_teams": 8,
+      "p50_score": 83.0,
+      "best_case_score": 203,
+      "top3_rate": 0.006266666666666667,
+      "top10_rate": 0.087025,
+      "last_rate": 0.0054,
+      "trend_rank_delta": -1.0,
+      "trend_score_delta": 0.0,
+      "trend_odds_delta": -0.0029166666666666664,
+      "trend_rank_direction": "down",
+      "current_rank_label": 26,
+      "teams": [
+        {
+          "team": "Florida",
+          "alive": true,
+          "current_round_status": "not_played_current_round"
+        },
+        {
+          "team": "Duke",
+          "alive": true,
+          "current_round_status": "won_current_round"
+        },
+        {
+          "team": "Michigan State",
+          "alive": true,
+          "current_round_status": "won_current_round"
+        },
+        {
+          "team": "Iowa State",
+          "alive": true,
+          "current_round_status": "not_played_current_round"
+        },
+        {
+          "team": "Texas Tech",
+          "alive": true,
+          "current_round_status": "not_played_current_round"
+        },
+        {
+          "team": "Arkansas",
+          "alive": true,
+          "current_round_status": "not_played_current_round"
+        },
+        {
+          "team": "Gonzaga",
+          "alive": false,
+          "current_round_status": "lost_current_round"
+        },
+        {
+          "team": "Missouri",
+          "alive": false,
+          "current_round_status": "eliminated_prior"
+        },
+        {
+          "team": "Virginia",
+          "alive": true,
+          "current_round_status": "not_played_current_round"
+        },
+        {
+          "team": "St. John's",
+          "alive": true,
+          "current_round_status": "not_played_current_round"
+        }
+      ]
+    },
+    {
       "name": "Rob Blackwood",
-      "current_rank": 28,
+      "current_rank": 29,
       "current_score": 27,
-      "live_win_rate": 0.0007333333333333333,
-      "top4_rate": 0.01025,
+      "live_win_rate": 0.00115,
+      "top4_rate": 0.011016666666666668,
       "remaining_live_teams": 6,
       "p50_score": 72.0,
-      "best_case_score": 240,
-      "top3_rate": 0.0068,
-      "top10_rate": 0.03290833333333334,
-      "last_rate": 0.03360833333333334,
-      "trend_rank_delta": 0.0,
+      "best_case_score": 261,
+      "top3_rate": 0.007583333333333334,
+      "top10_rate": 0.03525833333333333,
+      "last_rate": 0.02335,
+      "trend_rank_delta": -1.0,
       "trend_score_delta": 0.0,
-      "trend_odds_delta": -0.005349999999999967,
-      "trend_rank_direction": "flat",
-      "current_rank_label": 28,
+      "trend_odds_delta": 0.00041666666666670003,
+      "trend_rank_direction": "down",
+      "current_rank_label": 29,
       "teams": [
         {
           "team": "South Florida",
@@ -2002,21 +2074,21 @@
     },
     {
       "name": "Bradley Duell",
-      "current_rank": 29,
+      "current_rank": 30,
       "current_score": 26,
-      "live_win_rate": 0.0171,
-      "top4_rate": 0.07885666666666669,
+      "live_win_rate": 0.016233333333333332,
+      "top4_rate": 0.07971166666666667,
       "remaining_live_teams": 9,
-      "p50_score": 104.0,
-      "best_case_score": 246,
-      "top3_rate": 0.05900333333333333,
-      "top10_rate": 0.23191333333333342,
-      "last_rate": 0.0016,
-      "trend_rank_delta": 6.0,
-      "trend_score_delta": 2.0,
-      "trend_odds_delta": 0.0025166666666667,
-      "trend_rank_direction": "up",
-      "current_rank_label": 29,
+      "p50_score": 105.0,
+      "best_case_score": 250,
+      "top3_rate": 0.056033333333333324,
+      "top10_rate": 0.23693166666666665,
+      "last_rate": 0.0009,
+      "trend_rank_delta": -1.0,
+      "trend_score_delta": 0.0,
+      "trend_odds_delta": -0.000766666666666669,
+      "trend_rank_direction": "down",
+      "current_rank_label": 30,
       "teams": [
         {
           "team": "Arizona",
@@ -2071,92 +2143,22 @@
       ]
     },
     {
-      "name": "Morgan Fishback",
-      "current_rank": 29,
-      "current_score": 26,
-      "live_win_rate": 0.008,
-      "top4_rate": 0.08930000000000002,
-      "remaining_live_teams": 8,
-      "p50_score": 96.0,
-      "best_case_score": 264,
-      "top3_rate": 0.05565,
-      "top10_rate": 0.2169833333333333,
-      "last_rate": 0.0029,
-      "trend_rank_delta": 0.0,
-      "trend_score_delta": 0.0,
-      "trend_odds_delta": 0.0030499999999999998,
-      "trend_rank_direction": "flat",
-      "current_rank_label": 29,
-      "teams": [
-        {
-          "team": "South Florida",
-          "alive": false,
-          "current_round_status": "eliminated_prior"
-        },
-        {
-          "team": "Vanderbilt",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
-        },
-        {
-          "team": "Arkansas",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
-        },
-        {
-          "team": "Iowa State",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
-        },
-        {
-          "team": "Saint Mary's",
-          "alive": false,
-          "current_round_status": "eliminated_prior"
-        },
-        {
-          "team": "Illinois",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
-        },
-        {
-          "team": "Florida",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
-        },
-        {
-          "team": "St. John's",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
-        },
-        {
-          "team": "Texas",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
-        },
-        {
-          "team": "Michigan",
-          "alive": true,
-          "current_round_status": "won_current_round"
-        }
-      ]
-    },
-    {
       "name": "John Cash III",
-      "current_rank": 29,
+      "current_rank": 30,
       "current_score": 26,
-      "live_win_rate": 0.0035,
-      "top4_rate": 0.02875833333333333,
-      "remaining_live_teams": 9,
-      "p50_score": 93.0,
-      "best_case_score": 211,
-      "top3_rate": 0.01796666666666667,
-      "top10_rate": 0.13958333333333336,
-      "last_rate": 0.00565,
-      "trend_rank_delta": 0.0,
+      "live_win_rate": 0.00065,
+      "top4_rate": 0.01543666666666667,
+      "remaining_live_teams": 8,
+      "p50_score": 90.0,
+      "best_case_score": 203,
+      "top3_rate": 0.007875,
+      "top10_rate": 0.10185833333333334,
+      "last_rate": 0.008133333333333333,
+      "trend_rank_delta": -1.0,
       "trend_score_delta": 0.0,
-      "trend_odds_delta": -0.0021499999999999996,
-      "trend_rank_direction": "flat",
-      "current_rank_label": 29,
+      "trend_odds_delta": -0.00255,
+      "trend_rank_direction": "down",
+      "current_rank_label": 30,
       "teams": [
         {
           "team": "Florida",
@@ -2200,8 +2202,8 @@
         },
         {
           "team": "Gonzaga",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
+          "alive": false,
+          "current_round_status": "lost_current_round"
         },
         {
           "team": "Texas Tech",
@@ -2211,92 +2213,22 @@
       ]
     },
     {
-      "name": "Bo Anthony",
-      "current_rank": 29,
-      "current_score": 26,
-      "live_win_rate": 0.0,
-      "top4_rate": 0.00464,
-      "remaining_live_teams": 6,
-      "p50_score": 83.0,
-      "best_case_score": 223,
-      "top3_rate": 0.00227,
-      "top10_rate": 0.041275,
-      "last_rate": 0.025519999999999998,
-      "trend_rank_delta": 0.0,
-      "trend_score_delta": 0.0,
-      "trend_odds_delta": -0.0001,
-      "trend_rank_direction": "flat",
-      "current_rank_label": 29,
-      "teams": [
-        {
-          "team": "Duke",
-          "alive": true,
-          "current_round_status": "won_current_round"
-        },
-        {
-          "team": "Michigan",
-          "alive": true,
-          "current_round_status": "won_current_round"
-        },
-        {
-          "team": "Vanderbilt",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
-        },
-        {
-          "team": "Arkansas",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
-        },
-        {
-          "team": "North Carolina",
-          "alive": false,
-          "current_round_status": "eliminated_prior"
-        },
-        {
-          "team": "Clemson",
-          "alive": false,
-          "current_round_status": "eliminated_prior"
-        },
-        {
-          "team": "Louisville",
-          "alive": false,
-          "current_round_status": "lost_current_round"
-        },
-        {
-          "team": "Purdue",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
-        },
-        {
-          "team": "BYU",
-          "alive": false,
-          "current_round_status": "eliminated_prior"
-        },
-        {
-          "team": "Virginia",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
-        }
-      ]
-    },
-    {
       "name": "Adam Harris",
-      "current_rank": 29,
+      "current_rank": 30,
       "current_score": 26,
-      "live_win_rate": 0.0,
-      "top4_rate": 0.005566666666666667,
+      "live_win_rate": 0.00015,
+      "top4_rate": 0.00675,
       "remaining_live_teams": 8,
       "p50_score": 78.0,
-      "best_case_score": 222,
-      "top3_rate": 0.002766666666666667,
-      "top10_rate": 0.05148500000000002,
-      "last_rate": 0.021,
-      "trend_rank_delta": 0.0,
+      "best_case_score": 204,
+      "top3_rate": 0.0034166666666666672,
+      "top10_rate": 0.050535,
+      "last_rate": 0.016883333333333334,
+      "trend_rank_delta": -1.0,
       "trend_score_delta": 0.0,
-      "trend_odds_delta": -0.0002,
-      "trend_rank_direction": "flat",
-      "current_rank_label": 29,
+      "trend_odds_delta": 4.999999999999998e-05,
+      "trend_rank_direction": "down",
+      "current_rank_label": 30,
       "teams": [
         {
           "team": "St. John's",
@@ -2351,21 +2283,91 @@
       ]
     },
     {
+      "name": "Bo Anthony",
+      "current_rank": 30,
+      "current_score": 26,
+      "live_win_rate": 5e-05,
+      "top4_rate": 0.004083333333333333,
+      "remaining_live_teams": 6,
+      "p50_score": 85.0,
+      "best_case_score": 230,
+      "top3_rate": 0.0013833333333333334,
+      "top10_rate": 0.03747833333333334,
+      "last_rate": 0.025133333333333334,
+      "trend_rank_delta": -1.0,
+      "trend_score_delta": 0.0,
+      "trend_odds_delta": 5e-05,
+      "trend_rank_direction": "down",
+      "current_rank_label": 30,
+      "teams": [
+        {
+          "team": "Duke",
+          "alive": true,
+          "current_round_status": "won_current_round"
+        },
+        {
+          "team": "Michigan",
+          "alive": true,
+          "current_round_status": "won_current_round"
+        },
+        {
+          "team": "Vanderbilt",
+          "alive": true,
+          "current_round_status": "not_played_current_round"
+        },
+        {
+          "team": "Arkansas",
+          "alive": true,
+          "current_round_status": "not_played_current_round"
+        },
+        {
+          "team": "North Carolina",
+          "alive": false,
+          "current_round_status": "eliminated_prior"
+        },
+        {
+          "team": "Clemson",
+          "alive": false,
+          "current_round_status": "eliminated_prior"
+        },
+        {
+          "team": "Louisville",
+          "alive": false,
+          "current_round_status": "lost_current_round"
+        },
+        {
+          "team": "Purdue",
+          "alive": true,
+          "current_round_status": "not_played_current_round"
+        },
+        {
+          "team": "BYU",
+          "alive": false,
+          "current_round_status": "eliminated_prior"
+        },
+        {
+          "team": "Virginia",
+          "alive": true,
+          "current_round_status": "not_played_current_round"
+        }
+      ]
+    },
+    {
       "name": "Luke Hurbanis",
       "current_rank": 34,
       "current_score": 25,
-      "live_win_rate": 0.0037,
-      "top4_rate": 0.035115,
+      "live_win_rate": 0.00385,
+      "top4_rate": 0.03694166666666667,
       "remaining_live_teams": 9,
       "p50_score": 89.0,
-      "best_case_score": 237,
-      "top3_rate": 0.022836666666666665,
-      "top10_rate": 0.13974666666666666,
+      "best_case_score": 231,
+      "top3_rate": 0.023350000000000003,
+      "top10_rate": 0.14597999999999997,
       "last_rate": 0.0,
-      "trend_rank_delta": -1.0,
+      "trend_rank_delta": 0.0,
       "trend_score_delta": 0.0,
-      "trend_odds_delta": 0.0004000000000000002,
-      "trend_rank_direction": "down",
+      "trend_odds_delta": -0.00014999999999999996,
+      "trend_rank_direction": "flat",
       "current_rank_label": 34,
       "teams": [
         {
@@ -2424,18 +2426,18 @@
       "name": "Dan Swatek",
       "current_rank": 34,
       "current_score": 25,
-      "live_win_rate": 0.0025,
-      "top4_rate": 0.02841666666666667,
-      "remaining_live_teams": 9,
-      "p50_score": 93.0,
-      "best_case_score": 230,
-      "top3_rate": 0.016166666666666666,
-      "top10_rate": 0.14984,
-      "last_rate": 0.0062,
-      "trend_rank_delta": -1.0,
+      "live_win_rate": 0.00015,
+      "top4_rate": 0.0114,
+      "remaining_live_teams": 8,
+      "p50_score": 88.0,
+      "best_case_score": 233,
+      "top3_rate": 0.0048916666666666666,
+      "top10_rate": 0.11251666666666667,
+      "last_rate": 0.01255,
+      "trend_rank_delta": 0.0,
       "trend_score_delta": 0.0,
-      "trend_odds_delta": -0.0007499999999999998,
-      "trend_rank_direction": "down",
+      "trend_odds_delta": -0.00215,
+      "trend_rank_direction": "flat",
       "current_rank_label": 34,
       "teams": [
         {
@@ -2485,8 +2487,8 @@
         },
         {
           "team": "Gonzaga",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
+          "alive": false,
+          "current_round_status": "lost_current_round"
         }
       ]
     },
@@ -2494,18 +2496,18 @@
       "name": "Wade Cuda",
       "current_rank": 36,
       "current_score": 24,
-      "live_win_rate": 0.00205,
-      "top4_rate": 0.03041666666666666,
+      "live_win_rate": 0.0012,
+      "top4_rate": 0.024016666666666665,
       "remaining_live_teams": 7,
       "p50_score": 75.0,
-      "best_case_score": 271,
-      "top3_rate": 0.020333333333333335,
-      "top10_rate": 0.07413333333333331,
-      "last_rate": 0.038691666666666666,
-      "trend_rank_delta": 1.0,
-      "trend_score_delta": 2.0,
-      "trend_odds_delta": -9.999999999999983e-05,
-      "trend_rank_direction": "up",
+      "best_case_score": 237,
+      "top3_rate": 0.01608333333333333,
+      "top10_rate": 0.07205833333333332,
+      "last_rate": 0.0317,
+      "trend_rank_delta": 0.0,
+      "trend_score_delta": 0.0,
+      "trend_odds_delta": -0.0008500000000000003,
+      "trend_rank_direction": "flat",
       "current_rank_label": 36,
       "teams": [
         {
@@ -2564,18 +2566,18 @@
       "name": "Shelley Anthony",
       "current_rank": 37,
       "current_score": 23,
-      "live_win_rate": 0.00315,
-      "top4_rate": 0.024333333333333332,
+      "live_win_rate": 0.0024,
+      "top4_rate": 0.02323333333333334,
       "remaining_live_teams": 8,
       "p50_score": 81.0,
-      "best_case_score": 221,
-      "top3_rate": 0.016,
-      "top10_rate": 0.08496666666666668,
-      "last_rate": 0.014416666666666668,
-      "trend_rank_delta": 1.0,
-      "trend_score_delta": 2.0,
-      "trend_odds_delta": 9.999999999999983e-05,
-      "trend_rank_direction": "up",
+      "best_case_score": 224,
+      "top3_rate": 0.014816666666666665,
+      "top10_rate": 0.083785,
+      "last_rate": 0.010433333333333333,
+      "trend_rank_delta": 0.0,
+      "trend_score_delta": 0.0,
+      "trend_odds_delta": -0.0006500000000000004,
+      "trend_rank_direction": "flat",
       "current_rank_label": 37,
       "teams": [
         {
@@ -2634,18 +2636,18 @@
       "name": "Brant Fleming",
       "current_rank": 37,
       "current_score": 23,
-      "live_win_rate": 0.00065,
-      "top4_rate": 0.012383333333333331,
+      "live_win_rate": 0.0009,
+      "top4_rate": 0.011225,
       "remaining_live_teams": 8,
-      "p50_score": 94.0,
-      "best_case_score": 264,
-      "top3_rate": 0.006283333333333333,
-      "top10_rate": 0.0982933333333333,
-      "last_rate": 0.009258333333333334,
-      "trend_rank_delta": -1.0,
+      "p50_score": 95.0,
+      "best_case_score": 261,
+      "top3_rate": 0.005891666666666667,
+      "top10_rate": 0.10939166666666669,
+      "last_rate": 0.005816666666666667,
+      "trend_rank_delta": 0.0,
       "trend_score_delta": 0.0,
-      "trend_odds_delta": -0.00025,
-      "trend_rank_direction": "down",
+      "trend_odds_delta": 0.00034999999999999994,
+      "trend_rank_direction": "flat",
       "current_rank_label": 37,
       "teams": [
         {
@@ -2705,17 +2707,17 @@
       "current_rank": 39,
       "current_score": 21,
       "live_win_rate": 0.0,
-      "top4_rate": 0.0007666666666666667,
-      "remaining_live_teams": 6,
-      "p50_score": 62.0,
-      "best_case_score": 203,
-      "top3_rate": 0.00038333333333333334,
-      "top10_rate": 0.021416666666666667,
-      "last_rate": 0.1461,
-      "trend_rank_delta": -1.0,
+      "top4_rate": 0.0,
+      "remaining_live_teams": 5,
+      "p50_score": 57.0,
+      "best_case_score": 192,
+      "top3_rate": 0.0,
+      "top10_rate": 0.010416666666666666,
+      "last_rate": 0.1808,
+      "trend_rank_delta": 0.0,
       "trend_score_delta": 0.0,
-      "trend_odds_delta": -0.00015,
-      "trend_rank_direction": "down",
+      "trend_odds_delta": 0.0,
+      "trend_rank_direction": "flat",
       "current_rank_label": 39,
       "teams": [
         {
@@ -2760,8 +2762,8 @@
         },
         {
           "team": "Gonzaga",
-          "alive": true,
-          "current_round_status": "not_played_current_round"
+          "alive": false,
+          "current_round_status": "lost_current_round"
         },
         {
           "team": "Kansas",
@@ -2774,17 +2776,17 @@
       "name": "Jimmy P",
       "current_rank": 40,
       "current_score": 20,
-      "live_win_rate": 0.002,
-      "top4_rate": 0.01615,
+      "live_win_rate": 0.0017,
+      "top4_rate": 0.01591666666666667,
       "remaining_live_teams": 7,
-      "p50_score": 66.0,
-      "best_case_score": 247,
-      "top3_rate": 0.0078,
-      "top10_rate": 0.04533333333333333,
-      "last_rate": 0.12093333333333332,
+      "p50_score": 68.0,
+      "best_case_score": 248,
+      "top3_rate": 0.007433333333333334,
+      "top10_rate": 0.047716666666666664,
+      "last_rate": 0.09715000000000001,
       "trend_rank_delta": 0.0,
       "trend_score_delta": 0.0,
-      "trend_odds_delta": 0.0002000000000000001,
+      "trend_odds_delta": -0.00030000000000000014,
       "trend_rank_direction": "flat",
       "current_rank_label": 40,
       "teams": [
@@ -2845,16 +2847,16 @@
       "current_rank": 41,
       "current_score": 18,
       "live_win_rate": 0.0,
-      "top4_rate": 0.0001333333333333333,
+      "top4_rate": 0.0002,
       "remaining_live_teams": 6,
       "p50_score": 52.0,
-      "best_case_score": 103,
-      "top3_rate": 0.0,
-      "top10_rate": 0.0047,
-      "last_rate": 0.27134166666666665,
+      "best_case_score": 110,
+      "top3_rate": 0.0001,
+      "top10_rate": 0.006083333333333333,
+      "last_rate": 0.23526666666666665,
       "trend_rank_delta": 0.0,
       "trend_score_delta": 0.0,
-      "trend_odds_delta": -0.0022,
+      "trend_odds_delta": 0.0,
       "trend_rank_direction": "flat",
       "current_rank_label": 41,
       "teams": [

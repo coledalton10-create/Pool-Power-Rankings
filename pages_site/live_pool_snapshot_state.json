@@ -1,11 +1,13 @@
 {
-  "current_completed_games": 36,
-  "current_snapshot_key": "519ed8091a1b1179",
-  "latest_completed_game": "",
-  "newly_completed_games": [],
-  "newly_completed_games_count": 0,
-  "previous_completed_games": 35,
-  "previous_snapshot_key": "7c39954d7e69400c",
-  "trend_baseline_updated_this_run": false,
-  "updated_at": "2026-03-22T01:05:56.636899+00:00"
+  "current_completed_games": 37,
+  "current_snapshot_key": "164b5778cca71ffb",
+  "latest_completed_game": "Round of 32: Texas over Gonzaga",
+  "newly_completed_games": [
+    "Round of 32: Texas over Gonzaga"
+  ],
+  "newly_completed_games_count": 1,
+  "previous_completed_games": 36,
+  "previous_snapshot_key": "519ed8091a1b1179",
+  "trend_baseline_updated_this_run": true,
+  "updated_at": "2026-03-22T01:20:43.984578+00:00"
 }
