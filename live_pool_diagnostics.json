@@ -1,9 +1,9 @@
 {
-  "completed_games": 34,
-  "current_snapshot_key": "beb794c701680ae0",
+  "completed_games": 35,
+  "current_snapshot_key": "7c39954d7e69400c",
   "entry_count": 41,
   "last_place_share_sum": 0.9999999999999991,
-  "live_games": 3,
+  "live_games": 0,
   "output_files": [
     "live_pool_odds.csv",
     "live_pool_odds_previous.csv",
@@ -15,12 +15,12 @@
     "pages_site/live_pool_dashboard.json",
     "pages_site/live_pool_snapshot_state.json"
   ],
-  "previous_snapshot_key": "642a0a38c44454af",
-  "remaining_games_using_fallback_model": 25,
+  "previous_snapshot_key": "beb794c701680ae0",
+  "remaining_games_using_fallback_model": 27,
   "remaining_games_with_odds": 1,
   "simulations_run": 10000,
-  "top3_share_sum": 2.999999999999999,
-  "top4_share_sum": 3.9999999999999987,
+  "top3_share_sum": 2.9999999999999987,
+  "top4_share_sum": 3.999999999999999,
   "trend_baseline_updated_this_run": false,
   "win_probability_sum": 0.9999999999999992
 }
