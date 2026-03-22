@@ -2,7 +2,7 @@
   "completed_games": 41,
   "current_snapshot_key": "a02614466dbdf7f2",
   "entry_count": 41,
-  "last_place_share_sum": 0.9999999999999996,
+  "last_place_share_sum": 0.9999999999999997,
   "live_games": 1,
   "output_files": [
     "live_pool_odds.csv",
@@ -20,7 +20,7 @@
   "remaining_games_with_odds": 1,
   "simulations_run": 10000,
   "top3_share_sum": 2.999999999999999,
-  "top4_share_sum": 3.9999999999999987,
+  "top4_share_sum": 3.9999999999999982,
   "trend_baseline_updated_this_run": false,
   "win_probability_sum": 0.9999999999999996
 }
