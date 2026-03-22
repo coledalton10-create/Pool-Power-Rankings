@@ -1,13 +1,11 @@
 {
   "current_completed_games": 38,
   "current_snapshot_key": "165dfae70dd42676",
-  "latest_completed_game": "Round of 32: Illinois over VCU",
-  "newly_completed_games": [
-    "Round of 32: Illinois over VCU"
-  ],
-  "newly_completed_games_count": 1,
+  "latest_completed_game": "",
+  "newly_completed_games": [],
+  "newly_completed_games_count": 0,
   "previous_completed_games": 37,
   "previous_snapshot_key": "164b5778cca71ffb",
-  "trend_baseline_updated_this_run": true,
-  "updated_at": "2026-03-22T02:28:44.284204+00:00"
+  "trend_baseline_updated_this_run": false,
+  "updated_at": "2026-03-22T02:49:38.269966+00:00"
 }

@@ -1,14 +1,14 @@
 {
-  "updated_at": "2026-03-22T02:28:44.284204+00:00",
+  "updated_at": "2026-03-22T02:49:38.269966+00:00",
   "headline": {
     "title": "March Madness Pool Live Leaderboard",
     "subtitle": "Current standings and odds to win from the latest completed-game state."
   },
   "trend": {
-    "baseline_updated_this_run": true,
+    "baseline_updated_this_run": false,
     "current_completed_games": 38,
     "trend_reference_completed_games": 37,
-    "latest_completed_game": "Round of 32: Illinois over VCU",
+    "latest_completed_game": "",
     "current_round_label": "Round of 32"
   },
   "summary_cards": [
@@ -33,13 +33,11 @@
     "previous_snapshot_key": "164b5778cca71ffb",
     "current_completed_games": 38,
     "previous_completed_games": 37,
-    "trend_baseline_updated_this_run": true,
-    "newly_completed_games_count": 1,
-    "newly_completed_games": [
-      "Round of 32: Illinois over VCU"
-    ],
-    "latest_completed_game": "Round of 32: Illinois over VCU",
-    "updated_at": "2026-03-22T02:28:44.284204+00:00"
+    "trend_baseline_updated_this_run": false,
+    "newly_completed_games_count": 0,
+    "newly_completed_games": [],
+    "latest_completed_game": "",
+    "updated_at": "2026-03-22T02:49:38.269966+00:00"
   },
   "rows": [
     {
