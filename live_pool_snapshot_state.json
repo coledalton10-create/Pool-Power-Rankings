@@ -1,11 +1,13 @@
 {
-  "current_completed_games": 42,
-  "current_snapshot_key": "d47a3783c781a135",
-  "latest_completed_game": "",
-  "newly_completed_games": [],
-  "newly_completed_games_count": 0,
-  "previous_completed_games": 41,
-  "previous_snapshot_key": "a02614466dbdf7f2",
-  "trend_baseline_updated_this_run": false,
-  "updated_at": "2026-03-22T23:40:12.397623+00:00"
+  "current_completed_games": 43,
+  "current_snapshot_key": "c5094b59c8952f07",
+  "latest_completed_game": "Round of 32: St. John's over Kansas",
+  "newly_completed_games": [
+    "Round of 32: St. John's over Kansas"
+  ],
+  "newly_completed_games_count": 1,
+  "previous_completed_games": 42,
+  "previous_snapshot_key": "d47a3783c781a135",
+  "trend_baseline_updated_this_run": true,
+  "updated_at": "2026-03-23T00:00:09.546659+00:00"
 }
