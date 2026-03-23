@@ -21,6 +21,6 @@
   "simulations_run": 10000,
   "top3_share_sum": 3.0,
   "top4_share_sum": 3.999999999999999,
-  "trend_baseline_updated_this_run": true,
+  "trend_baseline_updated_this_run": false,
   "win_probability_sum": 0.9999999999999997
 }
