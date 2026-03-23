@@ -3,7 +3,7 @@
   "current_snapshot_key": "6cacbdc265ddc526",
   "entry_count": 41,
   "last_place_share_sum": 0.9999999999999998,
-  "live_games": 2,
+  "live_games": 3,
   "output_files": [
     "live_pool_odds.csv",
     "live_pool_odds_previous.csv",
@@ -16,7 +16,7 @@
     "pages_site/live_pool_snapshot_state.json"
   ],
   "previous_snapshot_key": "c5094b59c8952f07",
-  "remaining_games_using_fallback_model": 17,
+  "remaining_games_using_fallback_model": 16,
   "remaining_games_with_odds": 0,
   "simulations_run": 10000,
   "top3_share_sum": 2.999999999999999,
