@@ -1,14 +1,14 @@
 {
-  "updated_at": "2026-03-23T00:00:09.546659+00:00",
+  "updated_at": "2026-03-23T00:21:05.202832+00:00",
   "headline": {
     "title": "March Madness Pool Live Leaderboard",
     "subtitle": "Current standings and odds to win from the latest completed-game state."
   },
   "trend": {
-    "baseline_updated_this_run": true,
+    "baseline_updated_this_run": false,
     "current_completed_games": 43,
     "trend_reference_completed_games": 42,
-    "latest_completed_game": "Round of 32: St. John's over Kansas",
+    "latest_completed_game": "",
     "current_round_label": "Round of 32"
   },
   "summary_cards": [
@@ -33,13 +33,11 @@
     "previous_snapshot_key": "d47a3783c781a135",
     "current_completed_games": 43,
     "previous_completed_games": 42,
-    "trend_baseline_updated_this_run": true,
-    "newly_completed_games_count": 1,
-    "newly_completed_games": [
-      "Round of 32: St. John's over Kansas"
-    ],
-    "latest_completed_game": "Round of 32: St. John's over Kansas",
-    "updated_at": "2026-03-23T00:00:09.546659+00:00"
+    "trend_baseline_updated_this_run": false,
+    "newly_completed_games_count": 0,
+    "newly_completed_games": [],
+    "latest_completed_game": "",
+    "updated_at": "2026-03-23T00:21:05.202832+00:00"
   },
   "rows": [
     {
