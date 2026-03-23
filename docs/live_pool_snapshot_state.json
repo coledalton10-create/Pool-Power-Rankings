@@ -1,11 +1,13 @@
 {
-  "current_completed_games": 44,
-  "current_snapshot_key": "6cacbdc265ddc526",
-  "latest_completed_game": "",
-  "newly_completed_games": [],
-  "newly_completed_games_count": 0,
-  "previous_completed_games": 43,
-  "previous_snapshot_key": "c5094b59c8952f07",
-  "trend_baseline_updated_this_run": false,
-  "updated_at": "2026-03-23T01:20:16.863021+00:00"
+  "current_completed_games": 45,
+  "current_snapshot_key": "bee57d9ed3cd4c63",
+  "latest_completed_game": "Round of 32: Iowa over Florida",
+  "newly_completed_games": [
+    "Round of 32: Iowa over Florida"
+  ],
+  "newly_completed_games_count": 1,
+  "previous_completed_games": 44,
+  "previous_snapshot_key": "6cacbdc265ddc526",
+  "trend_baseline_updated_this_run": true,
+  "updated_at": "2026-03-23T01:40:13.069452+00:00"
 }
