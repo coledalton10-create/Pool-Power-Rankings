@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-04T23:00:36.043718+00:00",
+  "updated_at": "2026-05-04T23:30:32.428387+00:00",
   "headline": {
     "title": "March Madness Pool Live Leaderboard",
     "subtitle": "Current standings and odds to win from the latest completed-game state."
@@ -37,7 +37,7 @@
     "newly_completed_games_count": 0,
     "newly_completed_games": [],
     "latest_completed_game": "",
-    "updated_at": "2026-05-04T23:00:36.043718+00:00"
+    "updated_at": "2026-05-04T23:30:32.428387+00:00"
   },
   "rows": [
     {
